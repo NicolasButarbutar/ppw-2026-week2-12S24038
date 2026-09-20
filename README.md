@@ -24,7 +24,7 @@
 | **Profil LinkedIn** | [linkedin.com/in/nicolasjgracebutarbutar](nicolasjgracebutarbutar) |
 | **Profil GitHub** | [github.com/NicolasButarbutar](NicolasButarbutar) |
 | **Nama Repositori Tugas** | `ppw-2026-week2-12S24038` |
-| **Tautan Repositori GitHub** | `https://github.com/NicolasButarbutar/ppw-2026-week2-12S24038` |
+| **Tautan Repositori GitHub** | [https://github.com/NicolasButarbutar/ppw-2026-week2-12S24038](PPW-2026-WEEK2-12S24038) |
 | **Tautan Live Demo GitHub Pages** | `https://NicolasButarbutar.github.io/ppw-2026-week2-12S24038/` |
 
 ---
@@ -39,18 +39,6 @@
 | **3** | **Desain Form & Aksesibilitas** | **20%** | Kontrol input lengkap (minimal 6 jenis), pengelompokan `<fieldset>` & `<legend>`, keterhubungan label eksplisit, atribut validasi native, dan keyboard accessible (WCAG 2.2). | &check; Formulir memiliki 2 blok `<fieldset>` & `<legend>`, 8 jenis input kontrol (`text`, `email`, `tel`, `number`, `radio`, `checkbox`, `select`, `textarea`), seluruhnya memiliki pasangan eksplisit `<label for="...">`, `aria-describedby` ke hint text, `aria-required="true"`, dan fokus ring tebal. Terintegrasi tombol submit otomatis ke WhatsApp resmi (**085359373663**). |
 | **4** | **Estetika & Tata Letak Modern CSS** | **25%** | External CSS (`style.css`), Universal Box Sizing Reset, palet harmonis 60-30-10, tipografi modern, rounded corner, soft drop shadow, transisi hover, tata letak Flexbox/Grid, responsif media query (`@media (max-width: 768px)`). | &check; Berkas `style.css` eksternal terpisah, universal reset `*, *::before, *::after { box-sizing: border-box; }`, aturan warna 60-30-10 dengan 4 palet swatch pengguna, CSS Grid multi-kolom, Flexbox nav/hero, hover lift `translateY(-4px)`, bayangan halus berlapis, serta responsif di berbagai resolusi layar. |
 | **5** | **Git & Deployment GitHub Pages** | **20%** | Repositori terstruktur rapi, commit message jelas, README.md informatif (deskripsi + panduan), dan link GitHub Pages berfungsi live tanpa galat. | &check; Struktur repositori bersih (`index.html`, `style.css`, `README.md`), penamaan repositori standar `ppw-2026-week2-12S24038`, dan panduan deployment terperinci. |
-
----
-
-## Panduan Menjalankan Secara Lokal (Visual Studio Code)
-
-1. Buka folder proyek di **Visual Studio Code**:
-   ```bash
-   code .
-   ```
-2. Pastikan ekstensi **Live Server** (oleh Ritwick Dey) terpasang.
-3. Klik kanan pada berkas `index.html` lalu pilih **"Open with Live Server"**, atau klik tombol **"Go Live"** di bilah status bawah VS Code.
-4. Peramban akan otomatis membuka alamat lokal: `http://127.0.0.1:5500/index.html`.
 
 ---
 
@@ -80,10 +68,10 @@ git push -u origin main
 ```
 
 ### Aktivasi GitHub Pages:
-1. Buka repositori Anda di GitHub: `https://github.com/[username]/ppw-2026-week2-12S24038`.
+1. Buka repositori Anda di GitHub: `https://github.com/NicolasButarbutar/ppw-2026-week2-12S24038`.
 2. Klik tab **Settings** &rarr; menu **Pages** di sebelah kiri.
 3. Pada **Build and deployment > Branch**, pilih **`main`** lalu klik **Save**.
-4. Website akan aktif secara live di: `https://[username].github.io/ppw-2026-week2-12S24038/`.
+4. Website akan aktif secara live di: `https://NicolasButarbutar.github.io/ppw-2026-week2-12S24038/`.
 5. Kumpulkan URL Repositori dan URL Live Demo ke form perkuliahan: `https://forms.gle/XSsAm2Ukb4Av5pjLA`.
 
 ---
