@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio Resmi Nicolas J Grace Butarbutar (NIM: 12S24038) - Information Systems Student at Institut Teknologi Del | Aspiring Data Enthusiast, Web Developer, and Cyber Security Enthusiast.">
+  <meta name="author" content="Nicolas J Grace Butarbutar">
+  <title>Nicolas J Grace Butarbutar | Portfolio & Professional Showcase</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Aksesibilitas WCAG 2.2: Skip Navigation Link untuk Keyboard & Screen Reader -->
+  <a href="#main-content" class="skip-link">Loncat ke konten utama</a>
+
+  <!-- ========================================================================
+       HEADER & NAVIGASI STICKY OBSIDIAN (Kriteria 1 Semantik)
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-identity">
+        <a href="#hero" class="brand-logo" aria-label="Beranda Nicolas Butarbutar">
+          <div class="brand-badge">NB</div>
+          <div class="brand-info">
+            <span class="brand-name">Nicolas<span>.</span></span>
+            <span class="brand-tag">S1 Sistem Informasi • IT Del</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="main-nav" aria-label="Navigasi Utama Situs">
+        <ul class="nav-list">
+          <li><a href="#tentang" class="nav-link">Tentang & Pendidikan</a></li>
+          <li><a href="#pengalaman" class="nav-link">Pengalaman</a></li>
+          <li><a href="#sertifikasi" class="nav-link">Sertifikasi & Capaian</a></li>
+          <li><a href="#portofolio" class="nav-link">Proyek</a></li>
+          <li><a href="#metodologi" class="nav-link">Alur Kerja</a></li>
+          <li><a href="#layanan" class="nav-link nav-cta">Pesan Layanan</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO SECTION (DEEP MIDNIGHT & LINKEDIN SHOWCASE)
+       ======================================================================== -->
+  <div id="hero" class="hero-section">
+    <div class="hero-container">
+      
+      <!-- Kolom Teks Hero -->
+      <div class="hero-text-col">
+        <div class="badge-greeting">
+          <span class="pulse-dot"></span>
+          <span>Hello, Welcome!👋</span>
+        </div>
+        
+        <h1 class="hero-title">
+          <span class="text-gradient-cyan">Nicolas J Grace Butarbutar</span>
+        </h1>
+
+        <p class="hero-tagline">
+          Information Systems Student at Institut Teknologi Del | Aspiring Data Enthusiast, Web Developer, and Cyber Security Enthusiast
+        </p>
+
+        <p class="hero-desc">
+          Mahasiswa Sistem Informasi yang aktif dalam kegiatan keorganisasian kampus, pengembangan logika komputasi, dan rekayasa antarmuka web modern berstandar WCAG 2.2 Level AA. Terbuka untuk peluang kolaborasi, proyek rekayasa sistem, dan magang industri (*Open to Internship Opportunities*).
+        </p>
+
+        <div class="hero-meta-strip">
+          <span class="hero-meta-item">📍 Medan, Sumatera Utara, Indonesia</span>
+          <span class="hero-meta-item">🏫 Institut Teknologi Del (2024 - 2028)</span>
+        </div>
+
+        <!-- Tombol Aksi & Media Sosial Resmi -->
+        <div class="hero-actions">
+          <a href="#layanan" class="btn-hero btn-hero-primary">Pesan Layanan / Hire Me</a>
+          <a href="https://wa.me/6285359373663?text=Halo%20Nicolas,%20saya%20tertarik%20untuk%20berdiskusi%20proyek%20atau%20peluang%20magang%20bersama%20Anda." target="_blank" rel="noopener noreferrer" class="btn-hero btn-hero-wa" aria-label="Hubungi Nicolas via WhatsApp">
+            <span aria-hidden="true">&#9742;</span> WhatsApp
+          </a>
+          <a href="https://www.linkedin.com/in/nicolasjgracebutarbutar" target="_blank" rel="noopener noreferrer" class="btn-hero btn-hero-linkedin" aria-label="Profil LinkedIn Nicolas Butarbutar">
+            <span>in</span> LinkedIn
+          </a>
+          <a href="https://github.com/NicolasButarbutar" target="_blank" rel="noopener noreferrer" class="btn-hero btn-hero-github" aria-label="Profil GitHub Nicolas Butarbutar">
+            <span>&lt;/&gt;</span> GitHub
+          </a>
+        </div>
+      </div>
+
+      <!-- Kolom Visual Showcase Hero -->
+      <div class="hero-visual-col">
+        <div class="avatar-frame">
+          <div class="avatar-inner">
+            <img src="nicolas-profile.jpg" alt="Foto Profil Nicolas J Grace Butarbutar" class="profile-img">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       DYNAMIC COMPETENCY RIBBON STRIP
+       ======================================================================== -->
+  <div class="skills-ribbon" aria-label="Pita Kompetensi Utama">
+    <div class="ribbon-container">
+      <div class="ribbon-item"><span class="ribbon-bullet">&bull;</span> Web Development & Semantic HTML5</div>
+      <div class="ribbon-item"><span class="ribbon-bullet">&bull;</span> Aspiring Data Enthusiast</div>
+      <div class="ribbon-item"><span class="ribbon-bullet">&bull;</span> Cyber Security Enthusiast</div>
+      <div class="ribbon-item"><span class="ribbon-bullet">&bull;</span> Public Speaking & English Proficiency</div>
+      <div class="ribbon-item"><span class="ribbon-bullet">&bull;</span> Systems & Database Analysis</div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       KONTEN INTI UTAMA (Hanya 1 <main> dalam dokumen - Kriteria 1 Semantik)
+       ======================================================================== -->
+  <main id="main-content" class="main-wrapper">
+
+    <!-- SECTION 1: TENTANG SAYA, PENDIDIKAN, & KEAHLIAN TERATAS (Kriteria 1 & 2) -->
+    <section id="tentang" class="section-wrapper" aria-labelledby="heading-tentang">
+      <div class="section-title-group">
+        <span class="section-tag">Profil & Rekam Jejak</span>
+        <h2 id="heading-tentang" class="section-heading">Tentang Saya & Latar Belakang Pendidikan</h2>
+        <p class="section-subtitle">
+          Ringkasan profil profesional, riwayat institusi pendidikan formal, serta keahlian teratas yang diadopsi dari rekam jejak resmi LinkedIn.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Kartu Bio & Filosofi -->
+        <article class="bio-card">
+        <h3 class="card-title">Profil Profesional</h3>
+        <p class="bio-text">
+        Saya adalah mahasiswa S1 Sistem Informasi di Fakultas Informatika dan Teknik Elektro, Institut Teknologi Del, yang berasal dari Medan, Sumatera Utara. Memiliki minat mendalam di bidang <em>Data Science</em>, <em>Machine Learning</em>, <em>Web Development</em>, dan <em>Cybersecurity</em>, saya berfokus memadukan analisis data yang presisi dengan arsitektur pengembangan web modern. 
+        </p>
+        <p class="bio-text">
+        Pengalaman teknis saya mencakup penggunaan Python, SQL, PyTorch, dan TensorFlow, dengan fokus pada pemrosesan data, pemodelan <em>Computer Vision</em> seperti segmentasi citra satelit dan deteksi objek, hingga eksplorasi alur kerja kecerdasan buatan berbasis Langflow. Saya juga telah tersertifikasi sebagai <em>Associate Data Scientist</em> oleh Komdigi RI, berpartisipasi dalam program pelatihan Samsung Innovation Campus, serta terpilih sebagai <em>Guild Master</em> pada program Google Skills Arcade Facilitator. Selain itu, saya pernah menjalani pengalaman magang <em>Data Science &amp; Analytics</em> di Zidio Development serta aktif memimpin tim "CyberFamz" dalam ajang Del-AI-Hackathon melalui perancangan solusi AI "Sahabat-Toba".
+        </p>
+        <p class="bio-text">
+        Di luar ranah komputasi, saya aktif mengembangkan kapasitas diri melalui keterlibatan dalam komunitas Google Developer Groups, kepengurusan Badan Eksekutif Mahasiswa (BEM) di bidang pengabdian masyarakat, serta peran sebagai mentor asrama di lingkungan kampus. Pengalaman-pengalaman tersebut membantu saya mengasah kemampuan <em>public speaking</em>, kepemimpinan, kolaborasi analitis lintas disiplin, serta pemahaman mengenai protokol keselamatan dan kesehatan kerja (<em>Health &amp; Safety Protocol Management</em>).
+        </p>
+        </article>
+
+        <!-- Metadata Terstruktur Menggunakan Description List (<dl>, <dt>, <dd>) -->
+        <article class="academic-card">
+          <h3 class="card-title">Data Identitas</h3>
+          <dl class="academic-dl">
+            <div class="dl-item">
+              <dt>Nama Lengkap</dt>
+              <dd>Nicolas J Grace Butarbutar</dd>
+            </div>
+            <div class="dl-item">
+              <dt>NIM</dt>
+              <dd>12S24038</dd>
+            </div>
+            <div class="dl-item">
+              <dt>Program Studi</dt>
+              <dd>S1 Sistem Informasi</dd>
+            </div>
+            <div class="dl-item">
+              <dt>Perguruan Tinggi</dt>
+              <dd>Institut Teknologi Del</dd>
+            </div>
+            <div class="dl-item">
+              <dt>Domisili / Lokasi</dt>
+              <dd>Medan, Sumatera Utara, Indonesia</dd>
+            </div>
+            <div class="dl-item">
+              <dt>Surel Utama</dt>
+              <dd><a href="mailto:nicolasjgracebutarbutar@gmail.com" class="dl-link">nicolasjgracebutarbutar@gmail.com</a></dd>
+            </div>
+            <div class="dl-item">
+              <dt>Profil LinkedIn</dt>
+              <dd><a href="https://www.linkedin.com/in/nicolasjgracebutarbutar" target="_blank" rel="noopener noreferrer" class="dl-link">nicolasjgracebutarbutar</a></dd>
+            </div>
+            <div class="dl-item">
+              <dt>Repositori GitHub</dt>
+              <dd><a href="https://github.com/NicolasButarbutar" target="_blank" rel="noopener noreferrer" class="dl-link">NicolasButarbutar</a></dd>
+            </div>
+            <div class="dl-item">
+              <dt>WhatsApp Kontak</dt>
+              <dd><a href="https://wa.me/6285359373663" target="_blank" rel="noopener noreferrer" class="dl-link">085359373663</a></dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+
+      <!-- Grid Pendidikan & Keahlian Teratas -->
+      <div class="edu-skills-grid">
+        
+        <!-- Riwayat Pendidikan Formal -->
+        <article class="timeline-card">
+          <h3 class="card-title">Riwayat Pendidikan Formal</h3>
+          <ul class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="timeline-inst">Institut Teknologi Del</h4>
+              <p class="timeline-role">S1 Sistem Informasi &bull; FITE</p>
+              <p class="timeline-date">2024 &ndash; 2028 (Sedang Berjalan)</p>
+              <p style="font-size: 0.85rem; color: var(--text-dark-body); margin-top: 4px;">
+                Mendalami rekayasa perangkat lunak web, pemodelan basis data sistem, algoritma pemrograman, dan analisis arsitektur enterprise.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="timeline-inst">SMA Swasta W. R. Supratman 2 Medan</h4>
+              <p class="timeline-role">Pendidikan Menengah Atas (Senior High School)</p>
+              <p class="timeline-date">Juli 2021 &ndash; April 2024 (Lulus)</p>
+              <p style="font-size: 0.85rem; color: var(--text-dark-body); margin-top: 4px;">
+                Aktif mendalami dasar-dasar ilmu komputer, logika komputasional, serta partisipasi aktif dalam Programming Club.
+              </p>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Keahlian Teratas (Top Skills) dari Dokumen LinkedIn -->
+        <article class="skills-card">
+          <h3 class="card-title">Keahlian Teratas (Top Skills)</h3>
+          <ul class="top-skills-list">
+            <li class="top-skill-item">
+              <div class="skill-title-badge">
+                <span>Public Speaking & English Proficiency</span>
+                <span class="status-badge status-active">Aktif</span>
+              </div>
+              <p class="skill-desc">
+                Kemampuan komunikasi publik dwibahasa (Indonesia & Inggris), presentasi proyek, dan diskusi akademik terstruktur.
+              </p>
+            </li>
+            <li class="top-skill-item">
+              <div class="skill-title-badge">
+                <span>Analytical Discussion & Critical Thinking</span>
+                <span class="status-badge status-active">Kompeten</span>
+              </div>
+              <p class="skill-desc">
+                Penalaran analitis dalam memecahkan masalah komputasional (*brain-teasers*), perancangan sistem, dan sintaksis kode.
+              </p>
+            </li>
+            <li class="top-skill-item">
+              <div class="skill-title-badge">
+                <span>Health & Safety Protocol Management</span>
+                <span class="status-badge status-committee">Tersertifikasi Lapangan</span>
+              </div>
+              <p class="skill-desc">
+                Pengelolaan protokol keselamatan, pertolongan pertama (First Aid), dan koordinasi kepanitiaan tanggap darurat kampus.
+              </p>
+            </li>
+            <li class="top-skill-item">
+              <div class="skill-title-badge">
+                <span>Web Development & Computational Foundations</span>
+                <span class="status-badge status-certified">Teknis</span>
+              </div>
+              <p class="skill-desc">
+                Penguasaan HTML5 Semantik, Modern CSS3 (Flexbox/Grid), Python, C++, App Inventor, dan Git Versioning.
+              </p>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: PENGALAMAN ORGANISASI & KEPANITIAAN (List <ul> & <ol>) (Kriteria 2) -->
+    <section id="pengalaman" class="section-wrapper" aria-labelledby="heading-pengalaman">
+      <div class="section-title-group">
+        <span class="section-tag">Pengalaman Nyata</span>
+        <h2 id="heading-pengalaman" class="section-heading">Pengalaman Organisasi, Kepanitiaan, & Komunitas</h2>
+      </div>
+
+      <div class="experience-breakdown-grid">
+        
+ <!-- Pengalaman di Institut Teknologi Del -->
+        <article class="breakdown-card">
+          <h4>Aktivitas Kampus &bull; Institut Teknologi Del</h4>
+          <ul class="breakdown-list-ul">
+            <li>
+              <div class="exp-header-row">
+                <span class="exp-title">BEM IT Del &ndash; Departemen Hubungan &amp; Pengabdian Masyarakat</span>
+                <span class="exp-badge">(Januari 2026 &ndash; Sekarang)</span>
+              </div>
+              <p class="exp-meta">BEM Institut Teknologi Del &bull; Sitoluama, North Sumatra</p>
+              <p style="font-size: 0.885rem; color: var(--text-dark-body); margin-bottom: 6px;">
+                Berperan aktif dalam merancang serta mengeksekusi program pengabdian masyarakat dan membangun relasi strategis eksternal kampus:
+              </p>
+              <ol class="breakdown-list-ol">
+                <li>Menginisiasi dan mengorganisir aksi kemanusiaan donor darah rutin bekerja sama dengan lembaga kesehatan setempat.</li>
+                <li>Menggalang dan menyalurkan bantuan dana serta logistik untuk aksi kepedulian korban bencana alam.</li>
+                <li>Mengordinasikan program Bakti Paskah sebagai wujud kepedulian sosial dan pengabdian langsung kepada masyarakat sekitar.</li>
+                <li>Membangun serta memelihara hubungan kolaboratif yang harmonis antara mahasiswa, masyarakat sekitar, dan pemangku kepentingan eksternal kampus.</li>
+              </ol>
+            </li>
+
+            <li>
+              <div class="exp-header-row">
+                <span class="exp-title">Del English Club Member</span>
+                <span class="exp-badge">(2024 &ndash; Sekarang)</span>
+              </div>
+              <p class="exp-meta">Institut Teknologi Del &bull; Sitoluama, North Sumatera</p>
+              <p style="font-size: 0.885rem; color: var(--text-dark-body); margin-bottom: 8px;">
+                Berperan aktif dalam forum diskusi bahasa Inggris kampus, mengasah kelancaran berbicara publik, debat argumentatif, dan penulisan akademik internasional.
+              </p>
+            </li>
+
+            <li>
+              <div class="exp-header-row">
+                <span class="exp-title">First Aid &amp; Health Safety Committee</span>
+                <span class="exp-badge">(Juli 2025 &ndash; Agustus 2025)</span>
+              </div>
+              <p class="exp-meta">Program Cinta Almamater (PCA) IT Del &bull; Juli 2025 &ndash; Agustus 2025 &bull; Laguboti</p>
+              <p style="font-size: 0.885rem; color: var(--text-dark-body); margin-bottom: 6px;">
+                Tanggung jawab kepanitiaan pada program penyambutan dan orientasi almamater mahasiswa baru IT Del:
+              </p>
+              <ol class="breakdown-list-ol">
+                <li>Mengawasi implementasi protokol kesehatan dan keselamatan selama kegiatan luar ruangan PCA.</li>
+                <li>Menyediakan layanan pertolongan pertama (<em>First Aid</em>) cepat tanggap bagi peserta dan panitia.</li>
+                <li>Berkoordinasi dengan tim medis kampus demi kelancaran seluruh rangkaian kegiatan orientasi.</li>
+              </ol>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Pengalaman di SMA Swasta W. R. Supratman 2 Medan -->
+        <article class="breakdown-card">
+          <h4>Komunitas Pemrograman &bull; SMA W. R. Supratman 2</h4>
+          <ul class="breakdown-list-ul">
+            <li>
+              <div class="exp-header-row">
+                <span class="exp-title">Programming Club Member</span>
+                <span class="exp-badge">1 Tahun 4 Bulan (2023 &ndash; 2024)</span>
+              </div>
+              <p class="exp-meta">SMA Swasta W. R. Supratman 2 Medan &bull; Januari 2023 &ndash; April 2024 &bull; Medan</p>
+              <p style="font-size: 0.885rem; color: var(--text-dark-body); margin-bottom: 8px;">
+                <em>Dedicated my time as an active enthusiast within the school's programming community throughout the 2023/2024 academic year:</em>
+              </p>
+              <!-- Ordered list persis dari resume LinkedIn Nicolas -->
+              <ol class="breakdown-list-ol">
+                <li>
+                  <strong>Foundational Coding Workshops:</strong> Terlibat aktif dalam lokakarya pengodean fondasi dan modul interaktif pemecahan masalah (*interactive problem-solving modules*).
+                </li>
+                <li>
+                  <strong>Syntax Execution & Logic:</strong> Mengasah penalaran analitis, eksekusi sintaksis, dan logika pengembangan aplikasi bergerak (*early mobile development*) melalui praktik langsung dengan <strong>Python</strong>, <strong>C++</strong>, dan <strong>MIT App Inventor</strong>.
+                </li>
+                <li>
+                  <strong>Competitive Logic & Brain-Teasers:</strong> Saling bertukar ide dan logika strategis bersama rekan-rekan sebaya dalam tantangan pemecahan teka-teki logika komputasi kompetitif serta penugasan pemrograman mandiri.
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: TABEL REKAPITULASI SERTIFIKASI & PRESTASI LENGKAP (Kriteria 2 Wajib) -->
+    <section id="sertifikasi" class="section-wrapper" aria-labelledby="heading-sertifikasi">
+      <div class="section-title-group">
+        <span class="section-tag">Penyajian Data Terstruktur</span>
+        <h2 id="heading-sertifikasi" class="section-heading">Tabel Rekapitulasi Sertifikasi, Prestasi, & Capaian</h2>
+        <p class="section-subtitle">
+          Berikut adalah rincian rekapitulasi sertifikasi resmi, pencapaian kompetisi, serta rekam jejak akademik yang telah saya raih. Data ini mencerminkan komitmen saya terhadap pengembangan keterampilan teknis dan non-teknis secara berkelanjutan.
+        </p>
+      </div>
+
+      <div class="table-card">
+        <div class="table-scroll-wrapper">
+          <table class="modern-table">
+            <caption>
+              Daftar Rekapitulasi Sertifikasi Resmi dan Prestasi Kompetisi (Nicolas J Grace Butarbutar)
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">No / ID Kredensial</th>
+                <th scope="col">Nama Sertifikasi / Prestasi / Modul</th>
+                <th scope="col">Lembaga Penyelenggara / Penerbit</th>
+                <th scope="col">Tahun / Periode</th>
+                <th scope="col">Kategori & Bidang</th>
+                <th scope="col">Status Capaian</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">OLY-USU-2023</th>
+                <td>Grand Finalist &ndash; USU Student Olympiad 2023 (English)</td>
+                <td>Universitas Sumatera Utara (USU)</td>
+                <td>2023</td>
+                <td>Kompetisi Bahasa Inggris</td>
+                <td><span class="status-badge status-award">Grand Finalist</span></td>
+              </tr>
+              <tr>
+                <th scope="row">BINUS-OA-01</th>
+                <td>Education Partner Program &ndash; Office Automation</td>
+                <td>BINUS Center</td>
+                <td>2023/2024</td>
+                <td>Otomasi Perkantoran & Dokumen</td>
+                <td><span class="status-badge status-certified">Tersertifikasi</span></td>
+              </tr>
+              <tr>
+                <th scope="row">BINUS-INF-T1</th>
+                <td>Informatika untuk SMA Tahap 1</td>
+                <td>BINUS Center</td>
+                <td>2023</td>
+                <td>Fondasi Ilmu Komputer</td>
+                <td><span class="status-badge status-certified">Tersertifikasi</span></td>
+              </tr>
+              <tr>
+                <th scope="row">BINUS-INF-T2</th>
+                <td>Informatika untuk SMA Tahap 2</td>
+                <td>BINUS Center</td>
+                <td>2023</td>
+                <td>Logika & Pemrograman Lanjut</td>
+                <td><span class="status-badge status-certified">Tersertifikasi</span></td>
+              </tr>
+              <tr>
+                <th scope="row">BINUS-INF-T4</th>
+                <td>Informatika untuk SMA Tahap 4</td>
+                <td>BINUS Center</td>
+                <td>2024</td>
+                <td>Pengembangan Solusi Komputasi</td>
+                <td><span class="status-badge status-certified">Tersertifikasi</span></td>
+              </tr>
+              <tr>
+                <th scope="row">PCA-DEL-2025</th>
+                <td>First Aid & Health Safety Committee Program Cinta Almamater</td>
+                <td>Institut Teknologi Del</td>
+                <td>2025</td>
+                <td>Manajemen Protokol Kesehatan</td>
+                <td><span class="status-badge status-committee">Tuntas Bertugas</span></td>
+              </tr>
+              <tr>
+                <th scope="row">PPW-MOD-02</th>
+                <td>Praktikum Web Semantik, Modern CSS & Aksesibilitas WCAG 2.2 AA</td>
+                <td>Institut Teknologi Del (12S3101)</td>
+                <td>2026</td>
+                <td>Rekayasa Web Modern</td>
+                <td><span class="status-badge status-active">Sedang Berjalan</span></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="2">Total Akumulasi Kredensial Tercatat</th>
+                <td colspan="2">5 Sertifikasi/Prestasi Resmi + 2 Penugasan Akademik</td>
+                <td>Standar Aksesibilitas:</td>
+                <td><strong>WCAG 2.2 Level AA (&check;)</strong></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PORTOFOLIO KARYA & PROYEK UNGGULAN (<article> Grid) (Kriteria 1 & 2) -->
+    <section id="portofolio" class="section-wrapper" aria-labelledby="heading-portofolio">
+      <div class="section-title-group">
+        <span class="section-tag">Showcase Karya</span>
+        <h2 id="heading-portofolio" class="section-heading">Portofolio Proyek & Eksplorasi Rekayasa</h2>
+        <p class="section-subtitle">
+          Kumpulan proyek yang dikemas dalam komponen kartu mandiri (<code>&lt;article&gt;</code>), mencerminkan minat Nicolas pada rekayasa web, analisis data, dan keamanan siber.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- Card 1: Single Page Showcase -->
+        <article class="project-card">
+          <div class="project-banner-header">
+            <span class="project-badge">Web Engineering</span>
+            <span class="project-year">Februari 2026</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Single Page Showcase Webpage (Modul 02 PPW)</h3>
+            <p class="project-summary">
+              Pembangunan halaman portofolio profil profesional tunggal berbasis HTML5 semantik murni, aturan harmonisasi warna 60-30-10, tabel semantik lengkap, dan formulir interaktif berkualifikasi WCAG 2.2 AA.
+            </p>
+            <div class="project-tags">
+              <span class="project-pill">HTML5 Semantik</span>
+              <span class="project-pill">Modern CSS3</span>
+              <span class="project-pill">WCAG 2.2 AA</span>
+              <span class="project-pill">Git Workflows</span>
+            </div>
+            <div class="project-actions">
+              <a href="#sertifikasi" class="project-link-btn">Tinjau Rekapitulasi Data &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Programming Club Foundations -->
+        <article class="project-card">
+          <div class="project-banner-header">
+            <span class="project-badge">Software Logic</span>
+            <span class="project-year">2023 &ndash; 2024</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Computational Logic & Mobile Prototyping</h3>
+            <p class="project-summary">
+              Eksplorasi algoritma dan pemecahan teka-teki logika komputasi menggunakan Python dan C++, serta pembuatan prototipe aplikasi mobile interaktif memanfaatkan MIT App Inventor di Programming Club.
+            </p>
+            <div class="project-tags">
+              <span class="project-pill">Python</span>
+              <span class="project-pill">C++</span>
+              <span class="project-pill">App Inventor</span>
+              <span class="project-pill">Problem Solving</span>
+            </div>
+            <div class="project-actions">
+              <a href="#pengalaman" class="project-link-btn">Lihat Detail Pengalaman &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Data & Systems Analysis -->
+        <article class="project-card">
+          <div class="project-banner-header">
+            <span class="project-badge">Data & Systems</span>
+            <span class="project-year">2025 &ndash; 2026</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Information Systems Architecture & Data Modeling</h3>
+            <p class="project-summary">
+              Perancangan skema konseptual basis data relasional enterprise dan pemodelan proses bisnis terstruktur, menjadi fondasi dalam eksplorasi sains data (*data science*) dan audit keamanan sistem siber.
+            </p>
+            <div class="project-tags">
+              <span class="project-pill">Data Modeling</span>
+              <span class="project-pill">SQL Relational</span>
+              <span class="project-pill">Cyber Security</span>
+              <span class="project-pill">Enterprise IS</span>
+            </div>
+            <div class="project-actions">
+              <a href="#layanan" class="project-link-btn">Diskusi Proyek Kolaborasi &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: METODOLOGI ALUR KERJA REKAYASA (Ordered List <ol>) (Kriteria 2 Wajib) -->
+    <section id="metodologi" class="section-wrapper" aria-labelledby="heading-metodologi">
+      <div class="section-title-group">
+        <span class="section-tag">Metodologi Kerja</span>
+        <h2 id="heading-metodologi" class="section-heading">Alur Kerja Standar Rekayasa Antarmuka</h2>
+        <p class="section-subtitle">
+          Setiap proyek sistem dan antarmuka web ditangani secara sistematis menggunakan 4 tahapan berurutan berikut (disajikan melalui tag <code>&lt;ol&gt;</code>):
+        </p>
+      </div>
+
+      <div class="methodology-container">
+        <ol class="steps-list">
+          <li class="step-box">
+            <div class="step-num">1</div>
+            <h3 class="step-title">Analisis Masalah & Pemetaan Kebutuhan</h3>
+            <p class="step-text">
+              Mengidentifikasi profil pemangku kepentingan, kebutuhan sistem, dan memetakan dokumen sesuai prinsip <em>Separation of Concerns</em>.
+            </p>
+          </li>
+          <li class="step-box">
+            <div class="step-num">2</div>
+            <h3 class="step-title">Penyusunan Struktur Semantik HTML5</h3>
+            <p class="step-text">
+              Menyusun dokumen menggunakan tag standar tanpa <em>div-soup</em> guna menjamin kejelasan makna bagi screen reader difabel netra dan SEO.
+            </p>
+          </li>
+          <li class="step-box">
+            <div class="step-num">3</div>
+            <h3 class="step-title">Penerapan Estetika CSS & Responsivitas</h3>
+            <p class="step-text">
+              Mengimplementasikan aturan warna 60-30-10, sudut membulat, bayangan halus bertingkat, serta tata letak CSS Flexbox dan CSS Grid.
+            </p>
+          </li>
+          <li class="step-box">
+            <div class="step-num">4</div>
+            <h3 class="step-title">Audit Aksesibilitas & Publikasi GitHub Pages</h3>
+            <p class="step-text">
+              Memverifikasi kontras warna WCAG AA, navigasi keyboard penuh (*focus ring*), lalu mempublikasikan web secara live melalui GitHub Pages.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SECTION 6: FORMULIR PEMESANAN LAYANAN & WHATSAPP GENERATOR (Kriteria 3 Wajib) -->
+    <section id="layanan" class="section-wrapper" aria-labelledby="heading-layanan">
+      <div class="section-title-group">
+        <span class="section-tag">Layanan Interaktif</span>
+        <h2 id="heading-layanan" class="section-heading">Formulir Pemesanan Layanan & Kontak Konsultasi</h2>
+        <p class="section-subtitle">
+          Silakan lengkapi formulir di bawah ini untuk konsultasi rekayasa antarmuka web, diskusi proyek data, atau penawaran peluang magang (*internship*). Seluruh kontrol input memenuhi standar WCAG 2.2 Level AA dan terintegrasi otomatis ke WhatsApp resmi Nicolas.
+        </p>
+      </div>
+
+      <div class="form-layout-grid">
+        
+        <!-- Formulir Konsultasi Interaktif -->
+        <form id="consultationForm" class="consult-form" action="javascript:void(0);" novalidate>
+          <div class="form-guide">
+            <p>Kolom bertanda bintang (<span class="req-star" aria-hidden="true">*</span>) wajib diisi dengan informasi yang valid.</p>
+          </div>
+
+          <!-- BLOK 1: IDENTITAS PEMOHON -->
+          <fieldset class="form-block">
+            <legend class="form-legend-title">1. Informasi Data Diri Pemohon</legend>
+
+            <!-- Control 1: text -->
+            <div class="input-row">
+              <label for="form-name" class="field-label">
+                Nama Lengkap Pemohon <span class="req-star" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="text"
+                id="form-name"
+                name="client_name"
+                class="field-input"
+                required
+                placeholder="Contoh: Sarah Situmorang"
+                autocomplete="name"
+                aria-required="true"
+                aria-describedby="hint-name"
+              >
+              <small id="hint-name" class="field-hint">Nama lengkap resmi Anda untuk keperluan korespondensi.</small>
+            </div>
+
+            <!-- Control 2: email -->
+            <div class="input-row">
+              <label for="form-email" class="field-label">
+                Alamat Email Aktif <span class="req-star" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="email"
+                id="form-email"
+                name="client_email"
+                class="field-input"
+                required
+                placeholder="nama@domain.com atau nama@del.ac.id"
+                autocomplete="email"
+                aria-required="true"
+                aria-describedby="hint-email"
+              >
+              <small id="hint-email" class="field-hint">Konfirmasi jadwal dan berkas kerja akan dikirimkan ke alamat email ini.</small>
+            </div>
+
+            <!-- Control 3: tel -->
+            <div class="input-row">
+              <label for="form-phone" class="field-label">
+                Nomor Telepon / WhatsApp <span class="req-star" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="tel"
+                id="form-phone"
+                name="client_phone"
+                class="field-input"
+                required
+                placeholder="08xxxxxxxxxx"
+                pattern="[0-9]{10,14}"
+                autocomplete="tel"
+                aria-required="true"
+                aria-describedby="hint-phone"
+              >
+              <small id="hint-phone" class="field-hint">Gunakan format angka 10-14 digit untuk keperluan koordinasi cepat.</small>
+            </div>
+
+            <!-- Control 4: radio buttons -->
+            <div class="input-row">
+              <span class="field-label">Preferensi Moda Sesi Konsultasi <span class="req-star" aria-hidden="true">*</span></span>
+              <div class="radio-options-group" role="radiogroup" aria-required="true">
+                <label class="custom-choice">
+                  <input type="radio" name="meeting_type" value="Daring (Online via Google Meet/Zoom)" checked required>
+                  <span>Daring (Online via Google Meet / Zoom)</span>
+                </label>
+                <label class="custom-choice">
+                  <input type="radio" name="meeting_type" value="Luring (Tatap Muka di Kampus IT Del)" required>
+                  <span>Luring (Tatap Muka di Gedung FITE / Perpustakaan IT Del)</span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- BLOK 2: DETAIL LAYANAN & SPESIFIKASI KEBUTUHAN -->
+          <fieldset class="form-block">
+            <legend class="form-legend-title">2. Detail Layanan & Spesifikasi Kebutuhan</legend>
+
+            <!-- Control 5: select -->
+            <div class="input-row">
+              <label for="form-service" class="field-label">
+                Pilih Kategori Layanan Utama <span class="req-star" aria-hidden="true">*</span>
+              </label>
+              <select id="form-service" name="service_type" class="field-input" required aria-required="true" aria-describedby="hint-service">
+                <option value="" disabled selected>-- Pilih Topik Layanan Konsultasi --</option>
+                <option value="Rekayasa HTML5 Semantik & Pembersihan Struktur">Rekayasa HTML5 Semantik & Pembersihan Struktur Dokumen</option>
+                <option value="Desain Antarmuka Modern CSS (60-30-10) & Responsif">Desain Antarmuka Modern CSS (60-30-10) & Responsif</option>
+                <option value="Audit Aksesibilitas Web (WCAG 2.2 AA Compliance)">Audit Aksesibilitas Web (WCAG 2.2 AA Compliance)</option>
+                <option value="Manajemen Git & Deployment GitHub Pages">Manajemen Repositori Git & Deployment GitHub Pages</option>
+                <option value="Diskusi Peluang Magang (Internship Opportunity)">Diskusi Peluang Magang (Internship Opportunity)</option>
+                <option value="Analisis Sistem Informasi & Pemodelan Data">Analisis Sistem Informasi & Pemodelan Data</option>
+              </select>
+              <small id="hint-service" class="field-hint">Tentukan fokus topik yang paling relevan dengan kebutuhan Anda.</small>
+            </div>
+
+            <!-- Control 6: number -->
+            <div class="input-row">
+              <label for="form-duration" class="field-label">
+                Estimasi Alokasi Waktu Konsultasi (Jam) <span class="req-star" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="number"
+                id="form-duration"
+                name="session_duration"
+                class="field-input"
+                required
+                min="1"
+                max="8"
+                value="2"
+                aria-required="true"
+                aria-describedby="hint-duration"
+              >
+              <small id="hint-duration" class="field-hint">Durasi sesi belajar bersama antara 1 hingga 8 jam intensif.</small>
+            </div>
+
+            <!-- Control 7: checkbox -->
+            <div class="input-row">
+              <span class="field-label">Cakupan Luaran yang Diharapkan (Pilih yang sesuai):</span>
+              <div class="checkbox-options-group">
+                <label class="custom-choice">
+                  <input type="checkbox" id="opt-review" name="deliverable" value="Tinjauan Kode Semantik HTML5" checked>
+                  <span>Tinjauan Kode Semantik HTML5 & Struktur Ramah Screen Reader</span>
+                </label>
+                <label class="custom-choice">
+                  <input type="checkbox" id="opt-css" name="deliverable" value="Refaktor Modern CSS & Responsivitas" checked>
+                  <span>Refaktor Modern CSS & Desain Mobile-Friendly (60-30-10)</span>
+                </label>
+                <label class="custom-choice">
+                  <input type="checkbox" id="opt-a11y" name="deliverable" value="Audit Aksesibilitas WCAG 2.2 AA">
+                  <span>Laporan Kepatuhan Aksesibilitas WCAG 2.2 Level AA</span>
+                </label>
+                <label class="custom-choice">
+                  <input type="checkbox" id="opt-git" name="deliverable" value="Setup Repositori Git & GitHub Pages">
+                  <span>Konfigurasi Repositori Git & Live Demo GitHub Pages</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Control 8: textarea -->
+            <div class="input-row">
+              <label for="form-message" class="field-label">
+                Deskripsi Kebutuhan / Catatan Proyek <span class="req-star" aria-hidden="true">*</span>
+              </label>
+              <textarea
+                id="form-message"
+                name="project_notes"
+                class="field-input"
+                rows="4"
+                required
+                placeholder="Tuliskan secara singkat kendala kode web Anda, penawaran proyek magang, atau topik praktikum yang ingin dikonsultasikan..."
+                aria-required="true"
+                aria-describedby="hint-message"
+              ></textarea>
+              <small id="hint-message" class="field-hint">Berikan ringkasan yang jelas untuk mempermudah persiapan sesi.</small>
+            </div>
+
+            <!-- Persetujuan S&K -->
+            <div class="terms-agreement-box">
+              <label class="custom-choice" for="form-agree">
+                <input type="checkbox" id="form-agree" name="terms_agree" required aria-required="true">
+                <span>Saya menyatakan informasi ini benar dan siap mematuhi etika akademik perkuliahan Institut Teknologi Del. <span class="req-star" aria-hidden="true">*</span></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Tombol Kirim Otomatis ke WhatsApp -->
+          <div class="form-submit-group">
+            <button type="button" onclick="kirimKeWhatsApp()" class="btn-form-send">
+              <span aria-hidden="true">&#9742;</span>
+              <span>Kirim Permintaan & Buka WhatsApp Langsung</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- KONTEN PELENGKAP / ASIDE (Kriteria 1 Semantik Wajib) -->
+        <aside class="sidebar-info-aside" aria-label="Informasi Tambahan & Kontak Cepat">
+          
+          <!-- Status Mahasiswa Card -->
+          <div class="aside-info-card">
+            <div class="aside-status-badge">
+              <span class="pulse-dot"></span>
+              <span>Status: Terbuka Peluang & Magang</span>
+            </div>
+            <h3 class="aside-card-title">Jam Konsultasi Akademik</h3>
+            <p class="aside-card-text">
+              Diskusi proyek dan konsultasi perkuliahan dilayani pada jam operasional mahasiswa:
+            </p>
+            <ul class="aside-hours-list">
+              <li><strong>Senin &ndash; Jumat:</strong> 17.00 &ndash; 21.00 WIB</li>
+              <li><strong>Sabtu:</strong> 09.00 &ndash; 17.00 WIB</li>
+            </ul>
+          </div>
+
+          <!-- Narahubung Langsung Card -->
+          <div class="aside-info-card">
+            <h3 class="aside-card-title">Narahubung Resmi (LinkedIn)</h3>
+            <p class="aside-card-text">Hubungi saya untuk respon cepat terkait praktikum atau peluang magang:</p>
+            <address class="aside-contact-box">
+              <p><strong>Nama:</strong> Nicolas J Grace Butarbutar</p>
+              <p><strong>NIM:</strong> 12S24038</p>
+              <p><strong>Surel:</strong> <a href="mailto:nicolaszuliaaan@gmail.com" class="aside-direct-link">nicolaszuliaaan@gmail.com</a></p>
+              <p><strong>WhatsApp:</strong> <a href="https://wa.me/6285359373663" class="aside-direct-link" target="_blank" rel="noopener noreferrer">085359373663</a></p>
+              <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nicolasjgracebutarbutar" class="aside-direct-link" target="_blank" rel="noopener noreferrer">nicolasjgracebutarbutar</a></p>
+              <p><strong>GitHub:</strong> <a href="https://github.com/NicolasButarbutar" class="aside-direct-link" target="_blank" rel="noopener noreferrer">NicolasButarbutar</a></p>
+              <p><strong>Lokasi:</strong> Medan &bull; Sitoluama, Laguboti</p>
+            </address>
+          </div>
+
+          <!-- Kutipan Prinsip Rekayasa Web Card -->
+          <div class="aside-info-card aside-dark-quote-card">
+            <h3 class="aside-card-title">Prinsip Rekayasa Web</h3>
+            <blockquote class="clean-quote">
+              "Struktur semantik memberikan makna hakiki; estetika menghadirkan keanggunan visual; dan aksesibilitas menjamin keadilan teknologi bagi semua orang."
+            </blockquote>
+            <p class="quote-by">&mdash; Clean Web Principles</p>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER RESMI DOKUMEN (Kriteria 1 Semantik Wajib)
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand-box">
+        <div class="footer-logo-badge">NB</div>
+        <div>
+          <p class="footer-brand-title">Nicolas J Grace Butarbutar • NIM 12S24038</p>
+          <p class="footer-brand-sub">S1 Sistem Informasi • Fakultas Informatika &amp; Teknik Elektro • Institut Teknologi Del</p>
+          <p class="footer-brand-sub">Medan, Sumatera Utara &bull; Sitoluama, Laguboti, Toba 22381</p>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Navigasi Halaman</h4>
+        <ul class="footer-links-list">
+          <li><a href="#tentang">Tentang &amp; Pendidikan</a></li>
+          <li><a href="#pengalaman">Pengalaman &amp; Organisasi</a></li>
+          <li><a href="#sertifikasi">Sertifikasi &amp; Capaian</a></li>
+          <li><a href="#portofolio">Koleksi Proyek</a></li>
+          <li><a href="#layanan">Formulir Layanan</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Tentang Portofolio Ini</h4>
+        <p class="footer-compliance-text">
+          Portofolio ini dikembangkan secara mandiri menggunakan <strong>HTML5 Semantik murni, CSS3 Modern, dan standar aksesibilitas web (WCAG 2.2 AA)</strong>. 
+          Dirancang sebagai bagian dari tugas Pemrograman dan Pengujian Aplikasi Web (12S3101) di Institut Teknologi Del.
+        </p>
+        <p class="compliance-check">
+          &check; WCAG 2.2 Level AA Accessible &bull; &check; Semantic HTML5 Validated
+        </p>
+      </div>
+    </div>
+
+    <div class="copyright-bottom">
+      <p>&copy; 2026 Nicolas J Grace Butarbutar. Hak Cipta Dilindungi Undang-Undang. S1 Sistem Informasi IT Del.</p>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       LOGIKA FORMULIR & WHATSAPP INTEGRATION INTERAKTIF
+       ======================================================================== -->
+  <script>
+    function kirimKeWhatsApp() {
+      const nama = document.getElementById('form-name').value.trim();
+      const email = document.getElementById('form-email').value.trim();
+      const phone = document.getElementById('form-phone').value.trim();
+      const serviceElement = document.getElementById('form-service');
+      const service = serviceElement.options[serviceElement.selectedIndex] ? serviceElement.options[serviceElement.selectedIndex].text : '';
+      const duration = document.getElementById('form-duration').value.trim();
+      
+      const meetingChecked = document.querySelector('input[name="meeting_type"]:checked');
+      const meeting = meetingChecked ? meetingChecked.value : '-';
+      
+      const message = document.getElementById('form-message').value.trim();
+      const agree = document.getElementById('form-agree').checked;
+
+      // Validasi kelengkapan data
+      if (!nama || !email || !phone || !serviceElement.value || !duration || !message) {
+        alert('Mohon lengkapi seluruh kolom formulir wajib bertanda bintang (*) sebelum mengirim!');
+        return;
+      }
+
+      if (!agree) {
+        alert('Silakan centang persetujuan etika akademik terlebih dahulu!');
+        return;
+      }
+
+      // Kumpulkan opsi luaran
+      const deliverables = [];
+      if (document.getElementById('opt-review').checked) deliverables.push('Tinjauan Kode Semantik HTML5');
+      if (document.getElementById('opt-css').checked) deliverables.push('Refaktor Modern CSS');
+      if (document.getElementById('opt-a11y').checked) deliverables.push('Audit Aksesibilitas WCAG 2.2 AA');
+      if (document.getElementById('opt-git').checked) deliverables.push('Setup Git & GitHub Pages');
+      const luaran = deliverables.length > 0 ? deliverables.join(', ') : '-';
+
+      // Rangkum pesan terstruktur untuk WhatsApp
+      const pesanWA = 
+        "Halo Nicolas J Grace Butarbutar, saya ingin menghubungi Anda melalui formulir portofolio web:\n\n" +
+        "📌 *Data Diri Pemohon:*\n" +
+        "• Nama: " + nama + "\n" +
+        "• Email: " + email + "\n" +
+        "• WhatsApp: " + phone + "\n\n" +
+        "📌 *Detail Kebutuhan Layanan / Peluang:*\n" +
+        "• Kategori: " + service + "\n" +
+        "• Moda Pertemuan: " + meeting + "\n" +
+        "• Estimasi Waktu: " + duration + " Jam\n" +
+        "• Luaran Diharapkan: " + luaran + "\n\n" +
+        "📌 *Catatan / Deskripsi:*\n" +
+        "\"" + message + "\"";
+
+      const encodedWA = encodeURIComponent(pesanWA);
+      const myPhoneNumber = "6285359373663"; // Nomor resmi Nicolas Butarbutar
+
+      // Buka tautan WhatsApp di tab baru
+      window.open("https://wa.me/" + myPhoneNumber + "?text=" + encodedWA, "_blank");
+    }
+  </script>
+
+</body>
+</html>
