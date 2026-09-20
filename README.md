@@ -21,11 +21,11 @@
 | **Lokasi / Domisili** | Medan, Sumatera Utara, Indonesia & Sitoluama, Laguboti |
 | **Surel Resmi** | `nicolaszuliaaan@gmail.com` |
 | **WhatsApp Kontak** | `+62 853-5937-3663` (`085359373663`) |
-| **Profil LinkedIn** | [linkedin.com/in/nicolasjgracebutarbutar](https://www.linkedin.com/in/nicolasjgracebutarbutar) |
-| **Profil GitHub** | [github.com/NicolasButarbutar](https://github.com/NicolasButarbutar) |
+| **Profil LinkedIn** | [linkedin.com/in/nicolasjgracebutarbutar](nicolasjgracebutarbutar) |
+| **Profil GitHub** | [github.com/NicolasButarbutar](NicolasButarbutar) |
 | **Nama Repositori Tugas** | `ppw-2026-week2-12S24038` |
-| **Tautan Repositori GitHub** | `https://github.com/[username]/ppw-2026-week2-12S24038` |
-| **Tautan Live Demo GitHub Pages** | `https://[username].github.io/ppw-2026-week2-12S24038/` |
+| **Tautan Repositori GitHub** | `https://github.com/NicolasButarbutar/ppw-2026-week2-12S24038` |
+| **Tautan Live Demo GitHub Pages** | `https://NicolasButarbutar.github.io/ppw-2026-week2-12S24038/` |
 
 ---
 
