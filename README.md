@@ -29,20 +29,6 @@
 
 ---
 
-## Konsep Desain: Coastal Teal, Aqua, Cream & Warm Peach Sand
-
-Tema visual dirancang secara khusus berdasarkan palet warna pilihan mahasiswa (*Color Swatch Reference*):
-1. **Warna 1 - Deep Ocean Teal (`#007979`):** Memberikan identitas kuat, wibawa teknologi, dan ketegasan pada header, footer, dan border.
-2. **Warna 2 - Medium Aqua Turquoise (`#24B1B1`):** Aksen dinamis untuk efek cahaya, indikator fokus interaktif, garis bawah judul, dan titik status.
-3. **Warna 3 - Soft Warm Cream (`#FFF0E4`):** Warna dasar latar yang hangat, lembut di mata, dan memberikan kesan editorial profesional.
-4. **Warna 4 - Warm Peach Sand (`#FFE0C5`):** Tombol Call to Action (CTA) utama, badge prestasi, tag pengalaman, dan pembatas visual berkelas.
-
-### Penerapan Aturan Harmonisasi Warna (60-30-10 Rule):
-- **60% Netral Hangat:** Kanvas `#FAF5F0` dan kartu putih bersih `#FFFFFF` dengan aksen latar sekunder `#FFF0E4` (Cream Light).
-- **30% Struktural & Kontras:** Teks judul gelap `#003838`, teks paragraf `#1E3333` (rasio kontras > 7:1 WCAG AAA), dan kepala tabel `#004D4D`.
-- **10% Aksen Interaktif:** Tombol utama bergradien `#007979` & `#24B1B1` dengan kombinasi Peach Sand `#FFE0C5` untuk micro-interactions.
-
----
 
 ## Matriks Pemenuhan Kriteria & Rubrik Penilaian (100% Bobot)
 
