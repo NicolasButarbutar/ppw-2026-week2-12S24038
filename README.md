@@ -1,10 +1,29 @@
-# Portofolio Profesional & Layanan Interaktif Web (Coastal Teal & Warm Sand Edition)
+# Portofolio Profesional & Layanan Interaktif Web (Bootstrap 5.3 + Custom CSS)
 
-> **Tugas Mandiri Praktikum Minggu 02**  
+> **Tugas Mandiri Praktikum Minggu 03 (lanjutan Minggu 02)**  
 > **Mata Kuliah:** Pemrograman dan Pengujian Aplikasi Web (12S3101)  
 > **Program Studi:** S1 Sistem Informasi • Fakultas Informatika dan Teknik Elektro  
 > **Institusi:** Institut Teknologi Del, Sitoluama, Laguboti, Sumatera Utara  
 > **Dosen Pengampu:** Chandro Pardede, S.Kom., M.Sc.  
+
+---
+
+## Perbandingan Sebelum vs Sesudah Integrasi Framework
+
+| Area | Sebelum (Minggu 2) | Sesudah (Minggu 3) |
+| :--- | :--- | :--- |
+| Fondasi tampilan | CSS murni dengan Flexbox/Grid | Bootstrap 5.3.3 CDN + `custom-style.css` Overrides |
+| Navigasi | Sticky navigation berbasis CSS | `sticky-top` dengan navbar collapse dan hamburger Bootstrap |
+| Portofolio | Tiga kartu dengan layout CSS | Empat kartu responsif `row-cols-*` dengan dua modal detail Bootstrap |
+| Formulir | Input dan tombol custom | `form-floating`, input groups berikon, select Bootstrap, dan feedback validasi |
+| Interaksi | JavaScript WhatsApp sederhana | WhatsApp generator tetap dipertahankan, ditambah modal dan collapse Bootstrap |
+| Responsivitas | Media query custom | Breakpoint Bootstrap yang diperkuat media query custom |
+
+### Screenshot Hasil Modernisasi
+
+![Screenshot hasil modernisasi Bootstrap 5.3](screenshot-bootstrap.png)
+
+Screenshot telah diuji pada viewport mobile dan desktop: navbar hamburger terbuka pada mobile, serta modal detail proyek tampil dengan konten yang berbeda.
 
 ---
 
@@ -37,7 +56,7 @@
 | **1** | **Struktur Semantik HTML5** | **20%** | Memanfaatkan tag semantik `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>` secara tepat tanpa *div-soup* berlebihan. Struktur dokumen valid dan logis. | &check; Memuat `<header>`, `<nav>`, `<main>`, 6 `<section>` tematik (`#tentang`, `#pengalaman`, `#sertifikasi`, `#portofolio`, `#metodologi`, `#layanan`), kartu karya `<article>`, sidebar `<aside>`, serta `<footer>` resmi. Dilengkapi *Skip Link* aksesibilitas. |
 | **2** | **Penyajian Data (List & Table)** | **15%** | Tabel semantik lengkap (`<table>`, `<thead>`, `<tbody>`, `<tfoot>`, `<caption>`, `scope="col/row"`) dengan styling rapi; penggunaan HTML lists konsisten untuk hierarki informasi. | &check; Memuat tabel data semantik lengkap `modern-table` berisi seluruh sertifikasi BINUS & prestasi USU Olympiad dengan `<caption>`, `<thead>`, `<tbody>`, `<tfoot>`, dan atribut `scope="col/row"`. Memuat minimal dua jenis list: `<ul>` (top skills & organisasi), `<ol>` (rincian pengalaman programming club & 4 tahap alur kerja rekayasa), dan `<dl>` (metadata identitas resmi). |
 | **3** | **Desain Form & Aksesibilitas** | **20%** | Kontrol input lengkap (minimal 6 jenis), pengelompokan `<fieldset>` & `<legend>`, keterhubungan label eksplisit, atribut validasi native, dan keyboard accessible (WCAG 2.2). | &check; Formulir memiliki 2 blok `<fieldset>` & `<legend>`, 8 jenis input kontrol (`text`, `email`, `tel`, `number`, `radio`, `checkbox`, `select`, `textarea`), seluruhnya memiliki pasangan eksplisit `<label for="...">`, `aria-describedby` ke hint text, `aria-required="true"`, dan fokus ring tebal. Terintegrasi tombol submit otomatis ke WhatsApp resmi (**085359373663**). |
-| **4** | **Estetika & Tata Letak Modern CSS** | **25%** | External CSS (`style.css`), Universal Box Sizing Reset, palet harmonis 60-30-10, tipografi modern, rounded corner, soft drop shadow, transisi hover, tata letak Flexbox/Grid, responsif media query (`@media (max-width: 768px)`). | &check; Berkas `style.css` eksternal terpisah, universal reset `*, *::before, *::after { box-sizing: border-box; }`, aturan warna 60-30-10 dengan 4 palet swatch pengguna, CSS Grid multi-kolom, Flexbox nav/hero, hover lift `translateY(-4px)`, bayangan halus berlapis, serta responsif di berbagai resolusi layar. |
+| **4** | **Estetika & Tata Letak Modern CSS** | **25%** | External CSS (`custom-style.css`), Universal Box Sizing Reset, palet harmonis 60-30-10, tipografi modern, rounded corner, soft drop shadow, transisi hover, tata letak Flexbox/Grid, responsif media query (`@media (max-width: 768px)`). | &check; `custom-style.css` dimuat setelah Bootstrap dan meneruskan tema ke `style.css`; tersedia universal reset, palet 60-30-10, CSS Grid/Flexbox, hover lift, bayangan halus, serta responsif di berbagai resolusi layar. |
 | **5** | **Git & Deployment GitHub Pages** | **20%** | Repositori terstruktur rapi, commit message jelas, README.md informatif (deskripsi + panduan), dan link GitHub Pages berfungsi live tanpa galat. | &check; Struktur repositori bersih (`index.html`, `style.css`, `README.md`), penamaan repositori standar `ppw-2026-week2-12S24038`, dan panduan deployment terperinci. |
 
 ---

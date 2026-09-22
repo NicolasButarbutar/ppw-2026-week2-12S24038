@@ -709,6 +709,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  padding-left: 0;
 }
 
 .top-skill-item {
@@ -777,6 +778,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  padding-left: 0;
 }
 
 .breakdown-list-ul > li {
@@ -815,12 +817,14 @@ body {
 }
 
 .breakdown-list-ol {
-  margin-left: 20px;
+  margin-left: 0;
+  padding-left: 20px;
   color: var(--text-body);
   font-size: 0.86rem;
   display: flex;
   flex-direction: column;
   gap: 4px;
+  text-align: left;
 }
 
 /* --------------------------------------------------------------------------
@@ -1288,11 +1292,28 @@ body {
 }
 
 .aside-info-card {
+  position: relative;
   background-color: var(--card-bg);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl);
   padding: 24px;
   box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.aside-info-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--accent-gradient);
+}
+
+.aside-info-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--c-mocha);
+  box-shadow: var(--shadow-hover);
 }
 
 .aside-status-badge {
@@ -1310,10 +1331,18 @@ body {
 }
 
 .aside-card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-title);
   margin-bottom: 10px;
+}
+
+.aside-card-title i {
+  color: var(--c-mocha);
+  font-size: 1.05rem;
 }
 
 .aside-card-text {
@@ -1328,9 +1357,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding-left: 0;
 }
 
 .aside-hours-list li {
+  display: flex;
+  width: 100%;
+  align-self: flex-start;
+  align-items: center;
+  gap: 10px;
   font-size: 0.82rem;
   color: var(--text-body);
   padding: 7px 12px;
@@ -1339,11 +1374,38 @@ body {
   border: 1px solid var(--border-subtle);
 }
 
+.aside-hours-list li > i {
+  color: var(--c-mocha);
+  font-size: 1rem;
+}
+
+.aside-hours-list li span {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.aside-hours-list li small {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
 .aside-contact-box {
   font-style: normal;
   font-size: 0.88rem;
   line-height: 1.7;
   color: var(--text-body);
+}
+
+.aside-contact-box p {
+  padding: 8px 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(198, 231, 255, 0.7);
+}
+
+.aside-contact-box p:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .aside-direct-link {
@@ -1608,5 +1670,174 @@ body {
 
   .avatar-initials {
     font-size: 2.8rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   17. BOOTSTRAP 5.3 OVERRIDES (MINGGU 3)
+   -------------------------------------------------------------------------- */
+.navbar-toggler {
+  color: var(--c-pale);
+  border: 1px solid rgba(198, 231, 255, 0.4);
+  padding: 6px 10px;
+  font-size: 1.35rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.35);
+}
+
+.project-card.card {
+  width: 100%;
+  min-width: 0;
+  flex: none;
+  margin-top: 0;
+  padding: 0;
+  border-color: var(--border-subtle);
+  border-radius: var(--radius-xl);
+}
+
+.project-card.card:hover {
+  border-color: var(--c-mocha);
+}
+
+.project-link-btn.btn {
+  padding: 0;
+  border: 0;
+  color: var(--c-dark);
+  background: transparent;
+}
+
+.project-link-btn.btn:hover,
+.project-link-btn.btn:focus-visible {
+  color: var(--c-mocha);
+  background: transparent;
+}
+
+.project-modal-content {
+  width: 100%;
+  max-width: 100%;
+  max-height: calc(100vh - 32px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-hover);
+  overflow: hidden;
+}
+
+.project-modal-content .modal-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--accent-gradient);
+  color: #ffffff;
+  border-bottom: 0;
+}
+
+.project-modal-content .modal-title {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.project-modal-content .modal-body {
+  overflow-y: auto;
+  color: var(--text-body);
+  line-height: 1.65;
+}
+
+.project-modal-content .modal-body ul {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.project-modal-content .btn-close {
+  flex: 0 0 auto;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 575.98px) {
+  .modal-dialog {
+    width: auto;
+    margin: 16px;
+  }
+
+  .modal-dialog.modal-dialog-centered {
+    align-items: flex-start;
+  }
+
+  .project-modal-content .modal-header,
+  .project-modal-content .modal-body {
+    padding: 16px;
+  }
+}
+
+.input-group .form-floating > .form-control,
+.input-group .form-floating > .form-select {
+  border-left: 0;
+}
+
+.input-group-text {
+  color: var(--c-dark);
+  background-color: var(--section-alt);
+  border-color: #d4c5b9;
+}
+
+.form-floating > label {
+  color: var(--text-muted);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--c-mocha);
+  box-shadow: var(--shadow-focus);
+}
+
+.form-control:valid:not(:placeholder-shown),
+.form-select:valid {
+  border-color: var(--success);
+}
+
+@media (max-width: 767.98px) {
+  .header-container {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .main-nav.collapse:not(.show) {
+    display: none;
+  }
+
+  .main-nav.collapse.show {
+    display: block;
+    flex-basis: 100%;
+  }
+
+  .main-nav .nav-list {
+    align-items: stretch;
+    gap: 4px;
+    padding-top: 8px;
+  }
+
+  .main-nav .nav-link {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-nav.collapse {
+    display: flex;
+  }
+
+  .projects-grid.row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .projects-grid.row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

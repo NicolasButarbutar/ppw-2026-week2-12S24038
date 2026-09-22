@@ -6,7 +6,9 @@
   <meta name="description" content="Portofolio Resmi Nicolas J Grace Butarbutar (NIM: 12S24038) - Information Systems Student at Institut Teknologi Del | Aspiring Data Enthusiast, Web Developer, and Cyber Security Enthusiast.">
   <meta name="author" content="Nicolas J Grace Butarbutar">
   <title>Nicolas J Grace Butarbutar | Portfolio & Professional Showcase</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="custom-style.css">
 </head>
 <body>
 
@@ -16,8 +18,8 @@
   <!-- ========================================================================
        HEADER & NAVIGASI STICKY OBSIDIAN (Kriteria 1 Semantik)
        ======================================================================== -->
-  <header class="site-header">
-    <div class="header-container">
+  <header class="site-header sticky-top">
+    <div class="header-container container-fluid">
       <div class="brand-identity">
         <a href="#hero" class="brand-logo" aria-label="Beranda Nicolas Butarbutar">
           <div class="brand-badge">NB</div>
@@ -28,11 +30,14 @@
         </a>
       </div>
 
-      <nav class="main-nav" aria-label="Navigasi Utama Situs">
-        <ul class="nav-list">
-          <li><a href="#tentang" class="nav-link">Tentang & Pendidikan</a></li>
+      <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavigation" aria-controls="primaryNavigation" aria-expanded="false" aria-label="Buka navigasi">
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
+      <nav class="main-nav collapse d-md-flex" id="primaryNavigation" aria-label="Navigasi Utama Situs">
+        <ul class="nav-list navbar-nav flex-md-row align-items-md-center">
+          <li><a href="#tentang" class="nav-link">Tentang &amp; Pendidikan</a></li>
           <li><a href="#pengalaman" class="nav-link">Pengalaman</a></li>
-          <li><a href="#sertifikasi" class="nav-link">Sertifikasi & Capaian</a></li>
+          <li><a href="#sertifikasi" class="nav-link">Sertifikasi &amp; Capaian</a></li>
           <li><a href="#portofolio" class="nav-link">Proyek</a></li>
           <li><a href="#layanan" class="nav-link nav-cta">Pesan Layanan</a></li>
         </ul>
@@ -446,10 +451,10 @@
     </p>
   </div>
 
-  <div class="projects-grid">
+  <div class="projects-grid row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
     
     <!-- Card 1: Sahabat-Toba -->
-    <article class="project-card">
+    <article class="project-card card h-100">
       <div class="project-banner-header">
         <span class="project-badge">Artificial Intelligence</span>
         <span class="project-year">Juli 2026 &ndash; Agustus 2026</span>
@@ -465,10 +470,14 @@
           <span class="project-pill">AI Integration</span>
           <span class="project-pill">GitHub</span>
         </div>
+        <div class="project-actions">
+          <button class="project-link-btn btn btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#sahabatModal">Lihat detail <i class="bi bi-arrow-up-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
     </article>
 
     <!-- Card 2: Antony Mart -->
-    <article class="project-card">
+    <article class="project-card card h-100">
       <div class="project-banner-header">
         <span class="project-badge">ANAPRANCIS</span>
         <span class="project-year">Maret 2026 &ndash; Juni 2026</span>
@@ -484,10 +493,14 @@
           <span class="project-pill">BPMN 2.0</span>
           <span class="project-pill">System Analysis</span>
         </div>
+        <div class="project-actions">
+          <button class="project-link-btn btn btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#antonyModal">Lihat detail <i class="bi bi-arrow-up-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
     </article>
 
     <!-- Card 3: The Kit Co -->
-    <article class="project-card">
+    <article class="project-card card h-100">
       <div class="project-banner-header">
         <span class="project-badge">UI/UX Design</span>
         <span class="project-year">Januari 2026 &ndash; Mei 2026</span>
@@ -503,10 +516,52 @@
           <span class="project-pill">Prototyping</span>
           <span class="project-pill">User Flow</span>
         </div>
+        <div class="project-actions">
+          <span class="project-link-btn">Eksplorasi konsep <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4: Data Insight Dashboard -->
+    <article class="project-card card h-100">
+      <div class="project-banner-header">
+        <span class="project-badge">Data &amp; Analytics</span>
+        <span class="project-year">Eksplorasi 2026</span>
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Student Data Insight</h3>
+        <p class="project-summary">Eksplorasi dashboard analitik untuk merangkum data akademik dan membantu pengambilan keputusan berbasis temuan yang mudah dipahami.</p>
+        <div class="project-tags">
+          <span class="project-pill">Python</span>
+          <span class="project-pill">SQL</span>
+          <span class="project-pill">Data Visualization</span>
+        </div>
+        <div class="project-actions">
+          <span class="project-link-btn">Eksplorasi konsep <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </div>
     </article>
 
   </div>
 </section>
+
+<!-- Modal detail proyek Bootstrap -->
+<div class="modal fade" id="sahabatModal" tabindex="-1" aria-labelledby="sahabatModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content project-modal-content">
+      <div class="modal-header"><h2 class="modal-title fs-5" id="sahabatModalLabel">Sahabat-Toba</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
+      <div class="modal-body"><p>Solusi AI untuk membantu wisatawan menyusun itinerary Danau Toba melalui percakapan yang lebih kontekstual dan informatif.</p><ul><li>Integrasi Gemini API</li><li>Perancangan alur rekomendasi</li><li>Kolaborasi tim CyberFamz</li></ul></div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="antonyModal" tabindex="-1" aria-labelledby="antonyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content project-modal-content">
+      <div class="modal-header"><h2 class="modal-title fs-5" id="antonyModalLabel">Antony Mart</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
+      <div class="modal-body"><p>Perancangan transformasi proses bisnis toko dari pencatatan manual menuju alur pemesanan digital yang terstruktur.</p><ul><li>Pemetaan BPMN 2.0</li><li>Prototipe antarmuka di Figma</li><li>Analisis kebutuhan sistem</li></ul></div>
+    </div>
+  </div>
+</div>
 
     <!-- SECTION 5: FORMULIR PEMESANAN LAYANAN & WHATSAPP GENERATOR (Kriteria 3 Wajib) -->
     <section id="layanan" class="section-wrapper" aria-labelledby="heading-layanan">
@@ -532,59 +587,77 @@
 
             <!-- Control 1: text -->
             <div class="input-row">
-              <label for="form-name" class="field-label">
-                Nama Lengkap Pemohon <span class="req-star" aria-hidden="true">*</span>
-              </label>
-              <input
+              <label for="form-name" class="field-label d-none">Nama Lengkap Pemohon <span class="req-star" aria-hidden="true">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text" aria-hidden="true"><i class="bi bi-person"></i></span>
+                <div class="form-floating flex-grow-1">
+                  <input
                 type="text"
                 id="form-name"
                 name="client_name"
-                class="field-input"
+                class="field-input form-control"
                 required
                 placeholder="Contoh: Sarah Situmorang"
                 autocomplete="name"
                 aria-required="true"
                 aria-describedby="hint-name"
-              >
+                  >
+                  <label for="form-name">Nama Lengkap Pemohon <span class="req-star" aria-hidden="true">*</span></label>
+                  <div class="invalid-feedback">Nama lengkap wajib diisi.</div>
+                  <div class="valid-feedback">Nama siap digunakan.</div>
+                </div>
+              </div>
               <small id="hint-name" class="field-hint">Nama lengkap resmi Anda untuk keperluan korespondensi.</small>
             </div>
 
             <!-- Control 2: email -->
             <div class="input-row">
-              <label for="form-email" class="field-label">
-                Alamat Email Aktif <span class="req-star" aria-hidden="true">*</span>
-              </label>
-              <input
+              <label for="form-email" class="field-label d-none">Alamat Email Aktif <span class="req-star" aria-hidden="true">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text" aria-hidden="true"><i class="bi bi-envelope"></i></span>
+                <div class="form-floating flex-grow-1">
+                  <input
                 type="email"
                 id="form-email"
                 name="client_email"
-                class="field-input"
+                class="field-input form-control"
                 required
                 placeholder="nama@domain.com atau nama@del.ac.id"
                 autocomplete="email"
                 aria-required="true"
                 aria-describedby="hint-email"
-              >
+                  >
+                  <label for="form-email">Alamat Email Aktif <span class="req-star" aria-hidden="true">*</span></label>
+                  <div class="invalid-feedback">Gunakan alamat email yang valid.</div>
+                  <div class="valid-feedback">Email valid.</div>
+                </div>
+              </div>
               <small id="hint-email" class="field-hint">Konfirmasi jadwal dan berkas kerja akan dikirimkan ke alamat email ini.</small>
             </div>
 
             <!-- Control 3: tel -->
             <div class="input-row">
-              <label for="form-phone" class="field-label">
-                Nomor Telepon / WhatsApp <span class="req-star" aria-hidden="true">*</span>
-              </label>
-              <input
+              <label for="form-phone" class="field-label d-none">Nomor Telepon / WhatsApp <span class="req-star" aria-hidden="true">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text" aria-hidden="true"><i class="bi bi-telephone"></i></span>
+                <div class="form-floating flex-grow-1">
+                  <input
                 type="tel"
                 id="form-phone"
                 name="client_phone"
-                class="field-input"
+                class="field-input form-control"
                 required
                 placeholder="08xxxxxxxxxx"
                 pattern="[0-9]{10,14}"
                 autocomplete="tel"
                 aria-required="true"
                 aria-describedby="hint-phone"
-              >
+                  >
+                  <label for="form-phone">Nomor Telepon / WhatsApp <span class="req-star" aria-hidden="true">*</span></label>
+                  <div class="invalid-feedback">Masukkan 10-14 digit nomor telepon.</div>
+                  <div class="valid-feedback">Nomor siap digunakan.</div>
+                </div>
+              </div>
               <small id="hint-phone" class="field-hint">Gunakan format angka 10-14 digit untuk keperluan koordinasi cepat.</small>
             </div>
 
@@ -613,7 +686,9 @@
               <label for="form-service" class="field-label">
                 Pilih Kategori Layanan Utama <span class="req-star" aria-hidden="true">*</span>
               </label>
-              <select id="form-service" name="service_type" class="field-input" required aria-required="true" aria-describedby="hint-service">
+              <div class="input-group">
+                <span class="input-group-text" aria-hidden="true"><i class="bi bi-grid-3x3-gap"></i></span>
+                <select id="form-service" name="service_type" class="field-input form-select" required aria-required="true" aria-describedby="hint-service">
                 <option value="" disabled selected>-- Pilih Topik Layanan Konsultasi --</option>
                 <option value="Rekayasa HTML5 Semantik & Pembersihan Struktur">Rekayasa HTML5 Semantik & Pembersihan Struktur Dokumen</option>
                 <option value="Desain Antarmuka Modern CSS (60-30-10) & Responsif">Desain Antarmuka Modern CSS (60-30-10) & Responsif</option>
@@ -621,7 +696,9 @@
                 <option value="Manajemen Git & Deployment GitHub Pages">Manajemen Repositori Git & Deployment GitHub Pages</option>
                 <option value="Diskusi Peluang Magang (Internship Opportunity)">Diskusi Peluang Magang (Internship Opportunity)</option>
                 <option value="Analisis Sistem Informasi & Pemodelan Data">Analisis Sistem Informasi & Pemodelan Data</option>
-              </select>
+                </select>
+              </div>
+              <div class="invalid-feedback">Pilih satu kategori layanan.</div>
               <small id="hint-service" class="field-hint">Tentukan fokus topik yang paling relevan dengan kebutuhan Anda.</small>
             </div>
 
@@ -670,19 +747,25 @@
 
             <!-- Control 8: textarea -->
             <div class="input-row">
-              <label for="form-message" class="field-label">
-                Deskripsi Kebutuhan / Catatan Proyek <span class="req-star" aria-hidden="true">*</span>
-              </label>
-              <textarea
+              <label for="form-message" class="field-label d-none">Deskripsi Kebutuhan / Catatan Proyek <span class="req-star" aria-hidden="true">*</span></label>
+              <div class="input-group">
+                <span class="input-group-text align-items-start pt-3" aria-hidden="true"><i class="bi bi-chat-left-text"></i></span>
+                <div class="form-floating flex-grow-1">
+                  <textarea
                 id="form-message"
                 name="project_notes"
-                class="field-input"
+                class="field-input form-control"
                 rows="4"
                 required
                 placeholder="Tuliskan secara singkat kendala kode web Anda, penawaran proyek magang, atau topik praktikum yang ingin dikonsultasikan..."
                 aria-required="true"
                 aria-describedby="hint-message"
-              ></textarea>
+                  ></textarea>
+                  <label for="form-message">Deskripsi Kebutuhan / Catatan Proyek <span class="req-star" aria-hidden="true">*</span></label>
+                  <div class="invalid-feedback">Deskripsi kebutuhan wajib diisi.</div>
+                  <div class="valid-feedback">Catatan sudah siap.</div>
+                </div>
+              </div>
               <small id="hint-message" class="field-hint">Berikan ringkasan yang jelas untuk mempermudah persiapan sesi.</small>
             </div>
 
@@ -713,19 +796,19 @@
               <span class="pulse-dot"></span>
               <span>Status: Terbuka Peluang & Magang</span>
             </div>
-            <h3 class="aside-card-title">Jam Konsultasi Akademik</h3>
+            <h3 class="aside-card-title"><i class="bi bi-calendar2-week" aria-hidden="true"></i> Jam Konsultasi Akademik</h3>
             <p class="aside-card-text">
               Diskusi proyek dan konsultasi perkuliahan dilayani pada jam operasional mahasiswa:
             </p>
             <ul class="aside-hours-list">
-              <li><strong>Senin &ndash; Jumat:</strong> 17.00 &ndash; 21.00 WIB</li>
-              <li><strong>Sabtu:</strong> 09.00 &ndash; 17.00 WIB</li>
+              <li><i class="bi bi-clock" aria-hidden="true"></i><span><strong>Senin &ndash; Jumat</strong><small>17.00 &ndash; 21.00 WIB</small></span></li>
+              <li><i class="bi bi-clock" aria-hidden="true"></i><span><strong>Sabtu</strong><small>09.00 &ndash; 17.00 WIB</small></span></li>
             </ul>
           </div>
 
           <!-- Narahubung Langsung Card -->
           <div class="aside-info-card">
-            <h3 class="aside-card-title">Narahubung Resmi (LinkedIn)</h3>
+            <h3 class="aside-card-title"><i class="bi bi-person-lines-fill" aria-hidden="true"></i> Narahubung Resmi</h3>
             <p class="aside-card-text">Anda dapat menghubungi saya melalui :</p>
             <address class="aside-contact-box">
               <p><strong>Nama:</strong> Nicolas J Grace Butarbutar</p>
@@ -789,6 +872,7 @@
   <!-- ========================================================================
        LOGIKA FORMULIR & WHATSAPP INTEGRATION INTERAKTIF
        ======================================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script>
     function kirimKeWhatsApp() {
       const nama = document.getElementById('form-name').value.trim();
