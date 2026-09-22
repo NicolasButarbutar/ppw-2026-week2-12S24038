@@ -58,7 +58,7 @@ git commit -m "feat: complete week 2 html5 and modern css assignment"
 
 # 4. Hubungkan remote repository GitHub
 # (Pastikan Anda telah membuat repositori baru di GitHub dengan nama: ppw-2026-week2-12S24038)
-git remote add origin https://github.com/[username]/ppw-2026-week2-12S24038.git
+git remote add origin https://github.com/NicolasButarbutar/ppw-2026-week2-12S24038.git
 
 # 5. Tetapkan nama cabang utama ke 'main'
 git branch -M main
