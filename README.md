@@ -25,7 +25,7 @@
 | **Profil GitHub** | [github.com/NicolasButarbutar](NicolasButarbutar) |
 | **Nama Repositori Tugas** | `ppw-2026-week2-12S24038` |
 | **Tautan Repositori GitHub** | [https://github.com/NicolasButarbutar/ppw-2026-week2-12S24038](PPW-2026-WEEK2-12S24038) |
-| **Tautan Live Demo GitHub Pages** | [https://NicolasButarbutar.github.io/ppw-2026-week2-12S24038/]|
+| **Tautan Live Demo GitHub Pages** | https://NicolasButarbutar.github.io/ppw-2026-week2-12S24038/|
 
 ---
 
