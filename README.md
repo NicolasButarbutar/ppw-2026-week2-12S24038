@@ -20,7 +20,7 @@
 | **Headline Profesional** | *Information Systems Student at Institut Teknologi Del \| Aspiring Data Enthusiast, Web Developer, and Cyber Security Enthusiast \| Open to Internship Opportunities* |
 | **Lokasi / Domisili** | Medan, Sumatera Utara, Indonesia & Sitoluama, Laguboti |
 | **Surel Resmi** | `nicolaszuliaaan@gmail.com` |
-| **WhatsApp Kontak** | `+62 853-5937-3663` (`085359373663`) |
+| **WhatsApp Kontak** | `+62 853-5937-3663` |
 | **Profil LinkedIn** | [linkedin.com/in/nicolasjgracebutarbutar](nicolasjgracebutarbutar) |
 | **Profil GitHub** | [github.com/NicolasButarbutar](NicolasButarbutar) |
 | **Nama Repositori Tugas** | `ppw-2026-week2-12S24038` |
