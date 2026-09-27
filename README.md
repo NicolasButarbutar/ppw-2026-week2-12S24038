@@ -1,6 +1,7 @@
 # Portofolio Profesional & Layanan Interaktif Web (Coastal Teal & Warm Sand Edition)
 
-> **Tugas Mandiri Praktikum Minggu 02**  
+> **Tugas Mandiri Praktikum Minggu 03: Modernisasi & Refactoring Bootstrap 5**  
+> *(Melanjutkan Tugas Minggu 02)*  
 > **Mata Kuliah:** Pemrograman dan Pengujian Aplikasi Web (12S3101)  
 > **Program Studi:** S1 Sistem Informasi • Fakultas Informatika dan Teknik Elektro  
 > **Institusi:** Institut Teknologi Del, Sitoluama, Laguboti, Sumatera Utara  
@@ -29,16 +30,30 @@
 
 ---
 
-
 ## Matriks Pemenuhan Kriteria & Rubrik Penilaian (100% Bobot)
 
-| No | Komponen Penilaian | Bobot | Kriteria Evaluasi Modul | Bukti Implementasi pada Proyek |
+| No | Area Evaluasi | Bobot | Spesifikasi & Standar yang Wajib Terpenuhi | Bukti Implementasi pada Proyek |
 | :---: | :--- | :---: | :--- | :--- |
-| **1** | **Struktur Semantik HTML5** | **20%** | Memanfaatkan tag semantik `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>` secara tepat tanpa *div-soup* berlebihan. Struktur dokumen valid dan logis. | &check; Memuat `<header>`, `<nav>`, `<main>`, 6 `<section>` tematik (`#tentang`, `#pengalaman`, `#sertifikasi`, `#portofolio`, `#metodologi`, `#layanan`), kartu karya `<article>`, sidebar `<aside>`, serta `<footer>` resmi. Dilengkapi *Skip Link* aksesibilitas. |
-| **2** | **Penyajian Data (List & Table)** | **15%** | Tabel semantik lengkap (`<table>`, `<thead>`, `<tbody>`, `<tfoot>`, `<caption>`, `scope="col/row"`) dengan styling rapi; penggunaan HTML lists konsisten untuk hierarki informasi. | &check; Memuat tabel data semantik lengkap `modern-table` berisi seluruh sertifikasi BINUS & prestasi USU Olympiad dengan `<caption>`, `<thead>`, `<tbody>`, `<tfoot>`, dan atribut `scope="col/row"`. Memuat minimal dua jenis list: `<ul>` (top skills & organisasi), `<ol>` (rincian pengalaman programming club & 4 tahap alur kerja rekayasa), dan `<dl>` (metadata identitas resmi). |
-| **3** | **Desain Form & Aksesibilitas** | **20%** | Kontrol input lengkap (minimal 6 jenis), pengelompokan `<fieldset>` & `<legend>`, keterhubungan label eksplisit, atribut validasi native, dan keyboard accessible (WCAG 2.2). | &check; Formulir memiliki 2 blok `<fieldset>` & `<legend>`, 8 jenis input kontrol (`text`, `email`, `tel`, `number`, `radio`, `checkbox`, `select`, `textarea`), seluruhnya memiliki pasangan eksplisit `<label for="...">`, `aria-describedby` ke hint text, `aria-required="true"`, dan fokus ring tebal. Terintegrasi tombol submit otomatis ke WhatsApp resmi (**085359373663**). |
-| **4** | **Estetika & Tata Letak Modern CSS** | **25%** | External CSS (`style.css`), Universal Box Sizing Reset, palet harmonis 60-30-10, tipografi modern, rounded corner, soft drop shadow, transisi hover, tata letak Flexbox/Grid, responsif media query (`@media (max-width: 768px)`). | &check; Berkas `style.css` eksternal terpisah, universal reset `*, *::before, *::after { box-sizing: border-box; }`, aturan warna 60-30-10 dengan 4 palet swatch pengguna, CSS Grid multi-kolom, Flexbox nav/hero, hover lift `translateY(-4px)`, bayangan halus berlapis, serta responsif di berbagai resolusi layar. |
-| **5** | **Git & Deployment GitHub Pages** | **20%** | Repositori terstruktur rapi, commit message jelas, README.md informatif (deskripsi + panduan), dan link GitHub Pages berfungsi live tanpa galat. | &check; Struktur repositori bersih (`index.html`, `style.css`, `README.md`), penamaan repositori standar `ppw-2026-week2-12S24038`, dan panduan deployment terperinci. |
+| **1** | **Fondasi Framework & Semantik** | **15%** | Integrasi Bootstrap 5.3 CDN (CSS & JS bundle) + Bootstrap Icons; struktur semantik HTML5 tetap utuh (header, nav, main, section, footer); meta viewport responsif valid; `custom-style.css` dimuat setelah Bootstrap. | &check; Memuat CDN Bootstrap 5.3 & Icons. Menjaga struktur HTML5 (`<header>`, `<nav>`, dst). Tag `<meta name="viewport">` valid. `style.css` dipanggil sesudah link Bootstrap di `<head>`. |
+| **2** | **Responsive Navbar & Hero** | **20%** | Navbar sticky-top dengan brand identity; tombol hamburger toggle berfungsi membuka/menutup menu di layar ponsel tanpa error console; Hero Section proporsional dengan call-to-action (CTA). | &check; Navbar menggunakan `.sticky-top` dan `.navbar-brand`. Tombol *hamburger* `.navbar-toggler` berfungsi baik. *Hero section* dirancang proporsional dengan tombol CTA "Mari Berdiskusi". |
+| **3** | **Grid Portofolio & Modal Dialog** | **20%** | Minimal 4 buah Kartu Proyek (.card) dalam grid responsif (row-cols-1 row-cols-md-2 row-cols-lg-3 g-4); kartu memuat banner, badge teknologi, deskripsi, dan tombol; terhubung ke Bootstrap Modal (.modal) detail proyek (minimal 2 modal dengan konten berbeda). | &check; Terdapat 4 `.card` karya dalam grid `.row-cols-1 .row-cols-md-2 .row-cols-lg-3 .g-4`. Setiap kartu memiliki badge, deskripsi, dan tombol yang memicu pop-up `.modal` (4 modal berbeda). |
+| **4** | **Modernisasi Formulir Layanan** | **15%** | Formulir kontak Minggu 2 di-upgrade menggunakan komponen Bootstrap: Floating Labels (.form-floating) untuk input teks/email/pesan; Input Groups berikon; Select category; Checkbox syarat & ketentuan; umpan balik validasi visual (.valid-feedback / .invalid-feedback). | &check; Menggunakan `.form-floating`, `.input-group` dengan ikon, elemen `<select>`, `<input type="checkbox">` persetujuan, dan status validasi visual via `.needs-validation`. |
+| **5** | **Custom Overrides & Theming** | **15%** | Mendefinisikan minimal 6 variabel CSS pada `:root`; warna identitas personal unik (bukan template polos standar); transisi mikro-interaksi hover pada kartu dan tombol; bebas dari penggunaan `!important` serampangan. | &check; Mendefinisikan puluhan variabel `:root` palet personal (Coastal Teal). Transisi hover halus pada `.card`. Penggunaan `!important` telah dibersihkan dari overrides. |
+| **6** | **Git Management & Deployment** | **15%** | Branching/repositori terstruktur; berkas README.md memuat tabel komparasi "Sebelum vs Sesudah Integrasi Framework" + screenshot; terpublikasi aktif di GitHub Pages tanpa error 404. | &check; Struktur repo bersih, `README.md` memuat komparasi sebelum-sesudah framework beserta kolom *screenshot*, dan proyek *online* aktif di GitHub Pages. |
+
+---
+
+## Hasil Integrasi Framework Bootstrap 5
+
+| No | Fitur / Komponen | Detail Refaktor (Bootstrap 5) | Screenshot UI (Sesudah) |
+| :---: | :--- | :--- | :--- |
+| **1** | **Navigasi Utama** | Menggunakan Navbar Bootstrap (`.navbar-collapse`) | <img src="assets/sesudah-nav.png" width="250" alt="Sesudah Navigasi"> |
+| **2** | **Kartu Portofolio** | Menggunakan Komponen `.card` Bawaan Bootstrap | <img src="assets/sesudah-card.png" width="250" alt="Sesudah Kartu"> |
+| **3** | **Layout & Grid** | Menggunakan Bootstrap Grid (`container`, `row`, `col`) | <img src="assets/sesudah-grid.png" width="250" alt="Sesudah Grid"> |
+| **4** | **Formulir Layanan** | Menggunakan `.form-floating` & `.input-group` | <img src="assets/sesudah-form.png" width="250" alt="Sesudah Form"> |
+| **5** | **Interaksi Pop-up** | Menggunakan *Modal* Bootstrap untuk detail proyek | <img src="assets/sesudah-modal.png" width="250" alt="Sesudah Modal"> |
+
+> **Catatan Eksekusi**: Pastikan gambar screenshot (setelah perubahan) sudah Anda masukkan ke dalam folder `assets` dengan format nama file: `sesudah-nav.png`, `sesudah-card.png`, `sesudah-grid.png`, `sesudah-form.png`, dan `sesudah-modal.png`.
 
 ---
 
@@ -47,24 +62,16 @@
 Sesuai dengan **Bagian VI. Panduan Pengumpulan Tugas** pada modul:
 
 ```bash
-# 1. Inisialisasi Git repository lokal
-git init
-
-# 2. Tambahkan seluruh berkas ke staging area
+# 1. Tambahkan seluruh berkas perubahan ke staging area
 git add .
 
-# 3. Buat commit perdana dengan pesan standar modul
-git commit -m "feat: complete week 2 html5 and modern css assignment"
+# 2. Lakukan commit secara bertahap (minimal 3 commit bermakna)
+git commit -m "feat: add bootstrap navbar and hero grid"
+git commit -m "refactor: convert custom grid to bootstrap cols for portfolio"
+git commit -m "feat: integrate bootstrap modals and form validation"
 
-# 4. Hubungkan remote repository GitHub
-# (Pastikan Anda telah membuat repositori baru di GitHub dengan nama: ppw-2026-week2-12S24038)
-git remote add origin https://github.com/[username]/ppw-2026-week2-12S24038.git
-
-# 5. Tetapkan nama cabang utama ke 'main'
-git branch -M main
-
-# 6. Unggah kode ke repositori GitHub
-git push -u origin main
+# 3. Unggah pembaruan kode ke repositori GitHub
+git push origin main
 ```
 
 ### Aktivasi GitHub Pages:

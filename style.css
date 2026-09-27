@@ -226,7 +226,7 @@ body {
 
 .nav-cta {
   background: linear-gradient(135deg, #3B82F6 0%, #1E293B 100%);
-  color: #ffffff !important;
+  color: #ffffff;
   box-shadow: 0 3px 12px rgba(59, 130, 246, 0.45);
   margin-left: 8px;
 }
@@ -704,7 +704,7 @@ body {
   color: var(--text-muted);
 }
 
-.top-skills-list {
+.top-skills-list { padding-left: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -772,7 +772,7 @@ body {
   border-bottom: 2px solid var(--c-pale);
 }
 
-.breakdown-list-ul {
+.breakdown-list-ul { padding-left: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -961,7 +961,7 @@ body {
 .project-banner-header {
   height: 120px;
   background: linear-gradient(135deg, var(--c-dark) 0%, var(--c-dark) 100%);
-  padding: 16px 20px;
+  padding: 10px 14px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -1323,7 +1323,7 @@ body {
   margin-bottom: 14px;
 }
 
-.aside-hours-list {
+.aside-hours-list { padding-left: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -1610,3 +1610,12 @@ body {
     font-size: 2.8rem;
   }
 }
+
+.aside-contact-box p {
+  margin-bottom: 8px;
+}
+
+.aside-contact-box p:last-child {
+  margin-bottom: 0;
+}
+
