@@ -52,9 +52,6 @@
 | **3** | **Layout & Grid** | Menggunakan Bootstrap Grid (`container`, `row`, `col`) | <img src="assets/sesudah-grid.png" width="250" alt="Sesudah Grid"> |
 | **4** | **Formulir Layanan** | Menggunakan `.form-floating` & `.input-group` | <img src="assets/sesudah-form.png" width="250" alt="Sesudah Form"> |
 | **5** | **Interaksi Pop-up** | Menggunakan *Modal* Bootstrap untuk detail proyek | <img src="assets/sesudah-modal.png" width="250" alt="Sesudah Modal"> |
-
-> **Catatan Eksekusi**: Pastikan gambar screenshot (setelah perubahan) sudah Anda masukkan ke dalam folder `assets` dengan format nama file: `sesudah-nav.png`, `sesudah-card.png`, `sesudah-grid.png`, `sesudah-form.png`, dan `sesudah-modal.png`.
-
 ---
 
 ## Panduan Inisialisasi Git & Deployment GitHub Pages
