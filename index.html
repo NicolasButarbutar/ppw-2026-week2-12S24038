@@ -42,7 +42,7 @@
             <li class="nav-item"><a href="#pengalaman" class="nav-link px-3 rounded-pill">Pengalaman</a></li>
             <li class="nav-item"><a href="#sertifikasi" class="nav-link px-3 rounded-pill">Sertifikasi & Capaian</a></li>
             <li class="nav-item"><a href="#portofolio" class="nav-link px-3 rounded-pill">Proyek</a></li>
-            <li class="nav-item"><a href="#layanan" class="nav-link nav-cta px-4 rounded-pill ms-lg-2 mt-2 mt-lg-0">Pesan Layanan</a></li>
+            <li class="nav-item"><a href="#layanan" class="nav-link nav-cta px-4 rounded-pill ms-lg-2 mt-2 mt-lg-0">Pesan Layanan <span id="order-badge" class="badge bg-danger ms-1 rounded-pill">0</span></a></li>
           </ul>
         </div>
       </div>
@@ -457,103 +457,32 @@
     </p>
   </div>
 
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    
-    <!-- Card 1: Sahabat-Toba -->
-    <div class="col">
-      <article class="card h-100 project-card shadow-sm border-0">
-        <div class="card-header project-banner-header d-flex justify-content-between align-items-center bg-transparent border-bottom-0 pt-3 pb-0">
-          <span class="badge bg-primary project-badge rounded-pill">Artificial Intelligence</span>
-          <small class="text-muted project-year fw-semibold">Jul 2026</small>
-        </div>
-        <div class="card-body project-content d-flex flex-column">
-          <h3 class="card-title project-title h5 fw-bold mb-3">Sahabat-Toba (Del AI-Hackathon)</h3>
-          <p class="card-text project-summary text-muted small flex-grow-1">
-            Pengembangan platform dan asisten berbasis AI terintegrasi Gemini API bersama tim CyberFamz untuk mendukung analisis data interaktif, perencanaan rencana perjalanan (*itinerary*), dan digitalisasi pariwisata kawasan Danau Toba.
-          </p>
-          <div class="project-tags mb-3 d-flex flex-wrap gap-1">
-            <span class="badge bg-light text-dark border">Gemini API</span>
-            <span class="badge bg-light text-dark border">Python</span>
-            <span class="badge bg-light text-dark border">GitHub</span>
-          </div>
-          <button type="button" class="btn btn-outline-primary w-100 mt-auto rounded-pill fw-semibold" data-bs-toggle="modal" data-bs-target="#modalToba">
-            Lihat Detail Proyek
-          </button>
-        </div>
-      </article>
-    </div>
+  <div class="d-flex justify-content-center flex-wrap gap-2 mb-4">
+    <button class="btn btn-primary active category-filter" data-filter="All">Semua Proyek</button>
+    <button class="btn btn-outline-primary category-filter" data-filter="Artificial Intelligence">AI</button>
+    <button class="btn btn-outline-primary category-filter" data-filter="UI/UX Design">UI/UX</button>
+    <button class="btn btn-outline-primary category-filter" data-filter="Business Process">BPMN</button>
+    <button class="btn btn-outline-primary category-filter" data-filter="Web Development">Web</button>
+  </div>
 
-    <!-- Card 2: Antony Mart -->
-    <div class="col">
-      <article class="card h-100 project-card shadow-sm border-0">
-        <div class="card-header project-banner-header d-flex justify-content-between align-items-center bg-transparent border-bottom-0 pt-3 pb-0">
-          <span class="badge bg-success project-badge rounded-pill">ANAPRANCIS</span>
-          <small class="text-muted project-year fw-semibold">Mar 2026</small>
-        </div>
-        <div class="card-body project-content d-flex flex-column">
-          <h3 class="card-title project-title h5 fw-bold mb-3">Antony Mart</h3>
-          <p class="card-text project-summary text-muted small flex-grow-1">
-            Transformasi dan rekayasa ulang proses bisnis dari sistem pemesanan manual menjadi sistem digital terstruktur, mencakup pemodelan alur kerja *end-to-end* hingga perancangan prototipe antarmuka toko.
-          </p>
-          <div class="project-tags mb-3 d-flex flex-wrap gap-1">
-            <span class="badge bg-light text-dark border">Bizagi Modeler</span>
-            <span class="badge bg-light text-dark border">Figma</span>
-            <span class="badge bg-light text-dark border">BPMN 2.0</span>
-          </div>
-          <button type="button" class="btn btn-outline-primary w-100 mt-auto rounded-pill fw-semibold" data-bs-toggle="modal" data-bs-target="#modalAntony">
-            Lihat Detail Proyek
-          </button>
-        </div>
-      </article>
+  <div id="project-loading" class="text-center py-5" style="display:none;">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Memuat data...</span>
     </div>
+    <p class="mt-3 text-muted">Mengambil data proyek...</p>
+  </div>
+  
+  <div id="project-empty" class="text-center py-5" style="display:none;">
+    <i class="bi bi-inbox fs-1 text-muted"></i>
+    <p class="mt-3 text-muted">Belum ada proyek di kategori ini.</p>
+  </div>
+  
+  <div id="project-error" class="alert alert-danger mt-4" style="display:none;">
+    <i class="bi bi-exclamation-triangle-fill me-2"></i> Gagal memuat data portofolio. Silakan coba lagi nanti.
+  </div>
 
-    <!-- Card 3: The Kit Co -->
-    <div class="col">
-      <article class="card h-100 project-card shadow-sm border-0">
-        <div class="card-header project-banner-header d-flex justify-content-between align-items-center bg-transparent border-bottom-0 pt-3 pb-0">
-          <span class="badge bg-info project-badge rounded-pill text-dark">UI/UX Design</span>
-          <small class="text-muted project-year fw-semibold">Jan 2026</small>
-        </div>
-        <div class="card-body project-content d-flex flex-column">
-          <h3 class="card-title project-title h5 fw-bold mb-3">The Kit Co.</h3>
-          <p class="card-text project-summary text-muted small flex-grow-1">
-            Perancangan antarmuka dan pengalaman pengguna (*UI/UX design*) platform penyewaan peralatan mendaki gunung, berfokus pada alur pemesanan intuitif, sistem katalog visual, dan navigasi ramah pengguna.
-          </p>
-          <div class="project-tags mb-3 d-flex flex-wrap gap-1">
-            <span class="badge bg-light text-dark border">Figma</span>
-            <span class="badge bg-light text-dark border">Prototyping</span>
-            <span class="badge bg-light text-dark border">User Flow</span>
-          </div>
-          <button type="button" class="btn btn-outline-primary w-100 mt-auto rounded-pill fw-semibold" data-bs-toggle="modal" data-bs-target="#modalKitco">
-            Lihat Detail Proyek
-          </button>
-        </div>
-      </article>
-    </div>
-    
-    <!-- Card 4: Web Portofolio (New to meet requirements) -->
-    <div class="col">
-      <article class="card h-100 project-card shadow-sm border-0">
-        <div class="card-header project-banner-header d-flex justify-content-between align-items-center bg-transparent border-bottom-0 pt-3 pb-0">
-          <span class="badge bg-dark project-badge rounded-pill">Web Development</span>
-          <small class="text-muted project-year fw-semibold">Sep 2026</small>
-        </div>
-        <div class="card-body project-content d-flex flex-column">
-          <h3 class="card-title project-title h5 fw-bold mb-3">Portofolio & Konsultasi</h3>
-          <p class="card-text project-summary text-muted small flex-grow-1">
-            Pengembangan portal portofolio mandiri berbasis Bootstrap 5.3+ yang sepenuhnya mengadopsi standar aksesibilitas WCAG 2.2 AA serta struktur HTML5 Semantik.
-          </p>
-          <div class="project-tags mb-3 d-flex flex-wrap gap-1">
-            <span class="badge bg-light text-dark border">Bootstrap 5</span>
-            <span class="badge bg-light text-dark border">CSS Custom</span>
-            <span class="badge bg-light text-dark border">HTML5 Semantic</span>
-          </div>
-          <button type="button" class="btn btn-outline-primary w-100 mt-auto rounded-pill fw-semibold" data-bs-toggle="modal" data-bs-target="#modalPorto">
-            Lihat Detail Proyek
-          </button>
-        </div>
-      </article>
-    </div>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="project-grid" style="display:none;">
+    <!-- CSR Content Injected Here -->
 
   </div>
 </section>
@@ -777,26 +706,19 @@
   </footer>
 
   <!-- ========================================================================
-       LOGIKA FORMULIR & WHATSAPP INTEGRATION INTERAKTIF
+       MODALS PORTFOLIO (Universal Dynamic Modal)
        ======================================================================== -->
-  <!-- ========================================================================
-       MODALS PORTFOLIO
-       ======================================================================== -->
-  <!-- Modal Sahabat-Toba -->
-  <div class="modal fade" id="modalToba" tabindex="-1" aria-labelledby="modalTobaLabel" aria-hidden="true">
+  <div class="modal fade" id="universalModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header border-bottom-0">
-          <h5 class="modal-title fw-bold" id="modalTobaLabel">Sahabat-Toba</h5>
+          <h5 class="modal-title fw-bold" id="univModalTitle">Memuat...</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <p>Sahabat-Toba adalah platform inovatif yang dirancang untuk mendukung pariwisata kawasan Danau Toba dengan memanfaatkan Gemini API. Sistem ini memberikan kemudahan analisis data pariwisata dan pembuatan itinerary otomatis.</p>
-          <ul>
-            <li><strong>Teknologi:</strong> Python, Gemini API, GitHub</li>
-            <li><strong>Peran:</strong> Lead Developer & AI Integration</li>
-            <li><strong>Status:</strong> Diselesaikan dalam ajang Del AI-Hackathon 2026</li>
-          </ul>
+        <div class="modal-body" id="univModalBody">
+          <div class="text-center py-4">
+             <div class="spinner-border text-primary" role="status"></div>
+          </div>
         </div>
         <div class="modal-footer border-top-0">
           <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Tutup</button>
@@ -805,163 +727,17 @@
     </div>
   </div>
 
-  <!-- Modal Antony Mart -->
-  <div class="modal fade" id="modalAntony" tabindex="-1" aria-labelledby="modalAntonyLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header border-bottom-0">
-          <h5 class="modal-title fw-bold" id="modalAntonyLabel">Antony Mart</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Proyek analisis sistem informasi untuk toko Antony Mart. Melibatkan pemodelan ulang alur kerja manual menjadi sistem digital dengan menggunakan BPMN 2.0.</p>
-          <ul>
-            <li><strong>Teknologi:</strong> Bizagi Modeler, Figma</li>
-            <li><strong>Peran:</strong> Systems Analyst</li>
-            <li><strong>Hasil:</strong> Prototipe antarmuka toko dan dokumen BPMN yang komprehensif.</li>
-          </ul>
-        </div>
-        <div class="modal-footer border-top-0">
-          <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Tutup</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal The Kit Co -->
-  <div class="modal fade" id="modalKitco" tabindex="-1" aria-labelledby="modalKitcoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header border-bottom-0">
-          <h5 class="modal-title fw-bold" id="modalKitcoLabel">The Kit Co.</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Desain UI/UX platform penyewaan peralatan mendaki gunung. Berfokus pada kemudahan pengguna dalam melakukan pemesanan dan navigasi visual yang interaktif.</p>
-          <ul>
-            <li><strong>Teknologi:</strong> Figma</li>
-            <li><strong>Fokus:</strong> UI/UX Design, Prototyping, User Flow</li>
-          </ul>
-        </div>
-        <div class="modal-footer border-top-0">
-          <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Tutup</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal Web Portofolio -->
-  <div class="modal fade" id="modalPorto" tabindex="-1" aria-labelledby="modalPortoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header border-bottom-0">
-          <h5 class="modal-title fw-bold" id="modalPortoLabel">Portofolio & Konsultasi</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Pengembangan web portofolio ini dibangun menggunakan Bootstrap 5.3 dipadukan dengan kustomisasi CSS, memastikan desain tetap modern, responsif, dan mematuhi standar aksesibilitas web (WCAG 2.2 AA).</p>
-          <ul>
-            <li><strong>Teknologi:</strong> HTML5, CSS3, Bootstrap 5.3</li>
-            <li><strong>Fitur:</strong> Form validation, Responsive Grid, Modals, Floating Labels</li>
-          </ul>
-        </div>
-        <div class="modal-footer border-top-0">
-          <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Tutup</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Toast Container untuk Notifikasi Formulir -->
+  <div id="toast-container" class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1100;"></div>
 
   <!-- ========================================================================
-       BOOTSTRAP JS & FORMULIR INTEGRATION INTERAKTIF
+       BOOTSTRAP JS & APLIKASI CLIENT-SIDE RENDERING (CSR)
        ======================================================================== -->
   <!-- Bootstrap JS Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script>
-    // Pengecekan apakah Bootstrap berhasil dimuat
-    if (typeof bootstrap === 'undefined') {
-      alert("Peringatan: File JavaScript Bootstrap gagal dimuat! Pastikan koneksi internet Anda aktif agar fitur Pop-up (Modal) dapat berfungsi.");
-    } else {
-      // Fallback: Inisialisasi manual untuk setiap tombol detail proyek
-      document.addEventListener("DOMContentLoaded", function() {
-        var modalButtons = document.querySelectorAll('[data-bs-toggle="modal"]');
-        modalButtons.forEach(function(btn) {
-          btn.addEventListener('click', function(e) {
-            var targetId = this.getAttribute('data-bs-target');
-            if(targetId) {
-              var modalEl = document.querySelector(targetId);
-              if(modalEl) {
-                var modalInstance = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
-                modalInstance.show();
-              }
-            }
-          });
-        });
-      });
-    }
-
-    // Bootstrap Form Validation Logic
-    (() => {
-      'use strict'
-      const forms = document.querySelectorAll('.needs-validation')
-      Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          } else {
-            event.preventDefault(); // Prevent default submission to run custom WA script
-            kirimKeWhatsApp();
-          }
-          form.classList.add('was-validated')
-        }, false)
-      })
-    })()
-
-    function kirimKeWhatsApp() {
-      const nama = document.getElementById('form-name').value.trim();
-      const email = document.getElementById('form-email').value.trim();
-      const phone = document.getElementById('form-phone').value.trim();
-      const serviceElement = document.getElementById('form-service');
-      const service = serviceElement.options[serviceElement.selectedIndex] ? serviceElement.options[serviceElement.selectedIndex].text : '';
-      const duration = document.getElementById('form-duration').value.trim();
-      
-      const meetingChecked = document.querySelector('input[name="meeting_type"]:checked');
-      const meeting = meetingChecked ? meetingChecked.value : '-';
-      
-      const message = document.getElementById('form-message').value.trim();
-
-      // Kumpulkan opsi luaran
-      const deliverables = [];
-      if (document.getElementById('opt-review').checked) deliverables.push('Tinjauan Kode Semantik HTML5');
-      if (document.getElementById('opt-css').checked) deliverables.push('Refaktor Modern CSS');
-      if (document.getElementById('opt-a11y').checked) deliverables.push('Audit Aksesibilitas WCAG 2.2 AA');
-      if (document.getElementById('opt-git').checked) deliverables.push('Setup Git & GitHub Pages');
-      const luaran = deliverables.length > 0 ? deliverables.join(', ') : '-';
-
-      // Rangkum pesan terstruktur untuk WhatsApp
-      const pesanWA = 
-        "Halo Nicolas J Grace Butarbutar, saya ingin menghubungi Anda melalui formulir portofolio web:\n\n" +
-        "📌 *Data Diri Pemohon:*\n" +
-        "• Nama: " + nama + "\n" +
-        "• Email: " + email + "\n" +
-        "• WhatsApp: " + phone + "\n\n" +
-        "📌 *Detail Kebutuhan Layanan / Peluang:*\n" +
-        "• Kategori: " + service + "\n" +
-        "• Moda Pertemuan: " + meeting + "\n" +
-        "• Estimasi Waktu: " + duration + " Jam\n" +
-        "• Luaran Diharapkan: " + luaran + "\n\n" +
-        "📌 *Catatan / Deskripsi:*\n" +
-        "\"" + message + "\"";
-
-      const encodedWA = encodeURIComponent(pesanWA);
-      const myPhoneNumber = "6285359373663";
-
-      // Buka tautan WhatsApp di tab baru
-      window.open("https://wa.me/" + myPhoneNumber + "?text=" + encodedWA, "_blank");
-    }
-  </script>
+  <!-- Modul Aplikasi (Decoupled Layer & CSR) -->
+  <script type="module" src="js/app.js"></script>
 
 </body>
 </html>

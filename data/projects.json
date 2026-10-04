@@ -1,0 +1,54 @@
+[
+  {
+    "id": "project-toba",
+    "title": "Sahabat-Toba (Del AI-Hackathon)",
+    "category": "Artificial Intelligence",
+    "year": "Jul 2026",
+    "summary": "Pengembangan platform dan asisten berbasis AI terintegrasi Gemini API bersama tim CyberFamz untuk mendukung analisis data interaktif, perencanaan rencana perjalanan (*itinerary*), dan digitalisasi pariwisata kawasan Danau Toba.",
+    "tags": ["Gemini API", "Python", "GitHub"],
+    "details": "Sahabat-Toba adalah platform inovatif yang dirancang untuk mendukung pariwisata kawasan Danau Toba dengan memanfaatkan Gemini API. Sistem ini memberikan kemudahan analisis data pariwisata dan pembuatan itinerary otomatis.",
+    "roles": ["Lead Developer & AI Integration"],
+    "metrics": "Diselesaikan dalam ajang Del AI-Hackathon 2026",
+    "image": "assets/project-toba-placeholder.jpg",
+    "link": "https://github.com/NicolasButarbutar"
+  },
+  {
+    "id": "project-antony",
+    "title": "Antony Mart",
+    "category": "Business Process",
+    "year": "Mar 2026",
+    "summary": "Transformasi dan rekayasa ulang proses bisnis dari sistem pemesanan manual menjadi sistem digital terstruktur, mencakup pemodelan alur kerja *end-to-end* hingga perancangan prototipe antarmuka toko.",
+    "tags": ["Bizagi Modeler", "Figma", "BPMN 2.0"],
+    "details": "Proyek analisis sistem informasi untuk toko Antony Mart. Melibatkan pemodelan ulang alur kerja manual menjadi sistem digital dengan menggunakan BPMN 2.0.",
+    "roles": ["Systems Analyst"],
+    "metrics": "Prototipe antarmuka toko dan dokumen BPMN yang komprehensif.",
+    "image": "assets/project-antony-placeholder.jpg",
+    "link": "#"
+  },
+  {
+    "id": "project-kitco",
+    "title": "The Kit Co.",
+    "category": "UI/UX Design",
+    "year": "Jan 2026",
+    "summary": "Perancangan antarmuka dan pengalaman pengguna (*UI/UX design*) platform penyewaan peralatan mendaki gunung, berfokus pada alur pemesanan intuitif, sistem katalog visual, dan navigasi ramah pengguna.",
+    "tags": ["Figma", "Prototyping", "User Flow"],
+    "details": "Desain UI/UX platform penyewaan peralatan mendaki gunung. Berfokus pada kemudahan pengguna dalam melakukan pemesanan dan navigasi visual yang interaktif.",
+    "roles": ["UI/UX Designer"],
+    "metrics": "Menyelesaikan dokumen User Flow dan High-fidelity Prototyping.",
+    "image": "assets/project-kitco-placeholder.jpg",
+    "link": "#"
+  },
+  {
+    "id": "project-porto",
+    "title": "Portofolio & Konsultasi",
+    "category": "Web Development",
+    "year": "Sep 2026",
+    "summary": "Pengembangan portal portofolio mandiri berbasis Bootstrap 5.3+ yang sepenuhnya mengadopsi standar aksesibilitas WCAG 2.2 AA serta struktur HTML5 Semantik.",
+    "tags": ["Bootstrap 5", "CSS Custom", "HTML5 Semantic"],
+    "details": "Pengembangan web portofolio ini dibangun menggunakan Bootstrap 5.3 dipadukan dengan kustomisasi CSS, memastikan desain tetap modern, responsif, dan mematuhi standar aksesibilitas web (WCAG 2.2 AA).",
+    "roles": ["Front-End Developer"],
+    "metrics": "Skor Lighthouse 100% Accessibility",
+    "image": "assets/project-porto-placeholder.jpg",
+    "link": "https://NicolasButarbutar.github.io/ppw-2026-week2-12S24038/"
+  }
+]

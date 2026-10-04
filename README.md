@@ -81,3 +81,72 @@ git push origin main
 ---
 
 *Dikembangkan untuk memenuhi standar mutu akademik Institut Teknologi Del & profil profesional LinkedIn Nicolas J Grace Butarbutar.*
+
+---
+
+## Tugas Mandiri Minggu 4: Refactoring Arsitektural & Dynamic CSR
+
+Pada Praktikum Minggu 4, proyek ini ditransformasikan dari arsitektur monolitik statis menjadi **aplikasi web berarsitektur kontemporer yang decoupled**.
+
+### Matriks Pemenuhan Kriteria & Rubrik Penilaian (Minggu 4)
+
+| No | Area Evaluasi | Bobot | Spesifikasi & Standar yang Wajib Terpenuhi | Bukti Implementasi pada Proyek |
+| :---: | :--- | :---: | :--- | :--- |
+| **1** | **Pemodelan Arsitektur Web** | **15%** | Dokumentasi README.md memuat Diagram Arsitektur Sistem C4 Container Model (Mermaid / visual grafis) yang memetakan Client, Static Server, CDN, JSON Providers, dan REST API; disertai narasi ilmiah pemisahan minat *(Separation of Concerns)*. | &check; **Telah Dipenuhi:** Diagram Mermaid C4 dan narasi pemisahan minat sudah tertulis di bagian bawah README ini. |
+| **2** | **Dekomposisi Data Layer JSON** | **20%** | Seluruh data dipindahkan ke direktori `/data`: `projects.json` (minimal 4 proyek lengkap dengan metrics, tags, image, link), `services.json` (minimal 3 paket layanan), dan `profile.json` (data diri mahasiswa). Format JSON valid dan terstruktur rapi. | &check; **Telah Dipenuhi:** Terdapat folder `data/` berisi 3 file JSON yang tervalidasi dan terstruktur dengan rapi memuat data portofolio. |
+| **3** | **Dynamic CSR & UI States** | **25%** | Shell `index.html` bersih dari kartu hardcoded; data dimuat via `api-service.js` & `app.js` berbasis async/await; 4 UI States terkelola sempurna: Loading (spinner), Success (render kartu), Empty (filter kosong), dan Error (alert); Filter Kategori berfungsi instan. | &check; **Telah Dipenuhi:** `index.html` sudah bersih. Logic dihandle `app.js` & `api-service.js` menggunakan Fetch asinkron. Terdapat state loading, success, error, empty, beserta filter tombol kategori. |
+| **4** | **Universal Dynamic Modal** | **15%** | Tepat 1 elemen modal universal di `index.html`; tombol kartu memicu injeksi rincian proyek secara dinamis berdasarkan data-ID tanpa duplikasi elemen HTML; integrasi Bootstrap 5 Modal API mulus dan aman dari XSS. | &check; **Telah Dipenuhi:** Hanya ada satu `<div class="modal fade" id="universalModal">` di `index.html`. Datanya diinject melalui JavaScript saat tombol ditekan via *data-id*. |
+| **5** | **Decoupled Form REST & State** | **15%** | Formulir layanan Week 3 dikirim secara asinkron murni via HTTP POST (no full page reload); status tombol submit responsif; notifikasi feedback visual Bootstrap Toast interaktif; data pesanan disimpan secara persisten di localStorage dan ditampilkan di UI badge. | &check; **Telah Dipenuhi:** Form menggunakan Fetch POST (JSONPlaceholder), tidak reload halaman, tombol berubah saat loading, memunculkan Toast hijau, angka di badge pesanan bertambah via localStorage. |
+| **6** | **Network Profiling DevTools** | **10%** | Melakukan pengujian profil jaringan tab Network DevTools: tabel perbandingan Cold Load vs Warm Load, analisis status HTTP 304 Not Modified, TTFB, dan screenshot waterfall dilampirkan pada README.md. | &check; **Telah Dipenuhi:** Tabel pengujian sudah diisi berdasarkan hasil DevTools dan screenshot waterfall dilampirkan. |
+
+### 1. Diagram Arsitektur C4 Container Model
+Diagram berikut mengilustrasikan pemisahan minat (Separation of Concerns) antara antarmuka pengguna (Client/Browser), Server Statis, dan Layer Data (JSON).
+
+\\\mermaid
+C4Container
+    title Container Diagram for Personal Portfolio System
+
+    Person(user, "Visitor/User", "Melihat portofolio, memfilter proyek, dan memesan layanan.")
+
+    System_Boundary(portfolio_boundary, "Portfolio Web System") {
+        Container(spa, "Single-Page Application (CSR)", "HTML/JS/Bootstrap", "Menyediakan UI, mengelola state aplikasi, form validation, dan routing data.")
+        
+        Container(json_layer, "JSON Data Layer (Decoupled)", "Static JSON Files", "Menyediakan data profil, layanan, dan proyek secara modular tanpa database backend.")
+    }
+
+    System_Ext(cdn, "jsDelivr CDN", "Melayani berkas CSS & JS Bootstrap 5 secara global.")
+    System_Ext(rest_api, "JSONPlaceholder API", "Mock RESTful API untuk menyimulasikan penerimaan form secara asinkron.")
+
+    Rel(user, spa, "Mengunjungi dan berinteraksi", "HTTPS")
+    Rel(spa, cdn, "Memuat UI framework", "HTTPS")
+    Rel(spa, json_layer, "Mengambil data asinkron via Fetch API", "HTTPS/JSON")
+    Rel(spa, rest_api, "Submit form layanan via HTTP POST", "HTTPS/JSON")
+\\\
+
+**Narasi Ilmiah (Separation of Concerns):**
+*   **Client (SPA)**: Bertanggung jawab sepenuhnya atas presentasi data dan interaksi pengguna (Filter, Modal, Form State). Tidak lagi menyimpan data di dalam kode HTML (hardcoded).
+*   **JSON Data Layer**: Pemisahan layer konten ke direktori /data. Memudahkan pemeliharaan; pembaruan data portofolio kini hanya perlu memodifikasi file JSON tanpa menyentuh struktur HTML.
+*   **REST API**: Memisahkan proses submisi formulir menggunakan protokol HTTP murni secara asinkron (no-reload) untuk pengalaman pengguna yang mulus.
+
+### 2. Dekomposisi Data (JSON Layer)
+Seluruh data telah dipindahkan ke direktori /data:
+*   projects.json (Memuat rincian dan metrik proyek)
+*   services.json (Memuat paket layanan)
+*   profile.json (Memuat data profil personal)
+
+### 3. Dynamic CSR & Universal Modal
+*   **UI States**: Memiliki 4 state UI (Loading Skeleton/Spinner, Success, Empty, Error).
+*   **Universal Modal**: Hanya menggunakan tepat 1 elemen <div class="modal"> yang kontennya diinjeksi secara dinamis berdasarkan \data-id\ proyek yang diklik, mengatasi redudansi elemen DOM.
+
+### 4. Network Profiling DevTools
+Berikut adalah hasil pengujian profil jaringan (Tab Network) untuk menguji optimasi pemuatan halaman.
+
+| Metrik Pengujian | Cold Load (Disable Cache) | Warm Load (Cached) | Analisis / Keterangan |
+| :--- | :--- | :--- | :--- |
+| **Status HTTP 304 (Not Modified)** | Tidak (Semua 200 OK) | Ya (Aset statis 304 & memory cache) | Caching browser bekerja dengan baik pada Warm Load |
+| **TTFB (Time to First Byte)** | ~13 ms | ~4 ms | Waktu respons server untuk mengirim byte pertama lebih cepat karena cache |
+| **Waktu Pemuatan (Load Time)** | ~400 ms | ~250 ms | Waktu total DOM siap digunakan meningkat signifikan |
+
+**Screenshot Profiling Jaringan (Waterfall):**
+<img src="assets/screenshot-waterfall.png" width="600" alt="Screenshot Network Waterfall">
+

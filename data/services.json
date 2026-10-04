@@ -1,0 +1,22 @@
+[
+  {
+    "id": "svc-html5",
+    "name": "Rekayasa HTML5 Semantik & Pembersihan Struktur",
+    "description": "Refactoring dan perbaikan markup dasar menjadi HTML5 murni yang ramah mesin pencari (SEO) dan screen reader."
+  },
+  {
+    "id": "svc-css",
+    "name": "Desain Antarmuka Modern CSS (60-30-10) & Responsif",
+    "description": "Pengembangan desain UI responsif menggunakan pendekatan teori palet warna 60-30-10 dan framework CSS modern."
+  },
+  {
+    "id": "svc-a11y",
+    "name": "Audit Aksesibilitas Web (WCAG 2.2 AA Compliance)",
+    "description": "Evaluasi dan perbaikan aksesibilitas website agar memenuhi standar inklusivitas web WCAG 2.2 AA."
+  },
+  {
+    "id": "svc-git",
+    "name": "Manajemen Git & Deployment GitHub Pages",
+    "description": "Pengaturan repositori, pipeline komit terstruktur, dan penempatan online via GitHub Pages."
+  }
+]
