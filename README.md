@@ -102,7 +102,7 @@ Pada Praktikum Minggu 4, proyek ini ditransformasikan dari arsitektur monolitik 
 ### 1. Diagram Arsitektur C4 Container Model
 Diagram berikut mengilustrasikan pemisahan minat (Separation of Concerns) antara antarmuka pengguna (Client/Browser), Server Statis, dan Layer Data (JSON).
 
-\\\mermaid
+```mermaid
 C4Container
     title Container Diagram for Personal Portfolio System
 
@@ -121,7 +121,7 @@ C4Container
     Rel(spa, cdn, "Memuat UI framework", "HTTPS")
     Rel(spa, json_layer, "Mengambil data asinkron via Fetch API", "HTTPS/JSON")
     Rel(spa, rest_api, "Submit form layanan via HTTP POST", "HTTPS/JSON")
-\\\
+```
 
 **Narasi Ilmiah (Separation of Concerns):**
 *   **Client (SPA)**: Bertanggung jawab sepenuhnya atas presentasi data dan interaksi pengguna (Filter, Modal, Form State). Tidak lagi menyimpan data di dalam kode HTML (hardcoded).
@@ -149,4 +149,5 @@ Berikut adalah hasil pengujian profil jaringan (Tab Network) untuk menguji optim
 
 **Screenshot Profiling Jaringan (Waterfall):**
 <img src="assets/screenshot-waterfall.png" width="600" alt="Screenshot Network Waterfall">
+
 
